@@ -16,7 +16,7 @@ namespace AQC_Manager
         {
             InitializeComponent();
         }
-        string sql = "Server=localhost;Database=phpMyAdmin;Uid=root;";
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -25,21 +25,8 @@ namespace AQC_Manager
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MySqlConnection con = new MySqlConnection(sql);
-            MySqlCommand cmd;
-            con.Open();
-            try{
-cmd = con.CreateCommand();
-}
-catch(Exception){
-throw;
 
-}
-finally {
-if(con.State == ConnectionState.Open){
-con.Close();
-}
-}
+
         }
     }
 }
