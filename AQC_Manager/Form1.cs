@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace AQC_Manager
 {
@@ -14,6 +15,31 @@ namespace AQC_Manager
         public Form1()
         {
             InitializeComponent();
+        }
+        string sql = "Server=localhost;Databse=phpMyAdmin;Uid=root;";
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MySqlConnection con = new MySqlConnection(sql);
+            MySqlCommand cmd;
+            con.Open();
+            try{
+cmd = con.CreateCommand();
+}
+catch(Exception e){
+throw;
+
+}
+finally {
+if(con == ConnectionState.Open){
+con.Close();
+}
+}
         }
     }
 }
