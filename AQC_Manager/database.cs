@@ -9,14 +9,15 @@ namespace AQC_Manager
 {
     class database
     {
-        string sql = "Server=localhost;Database=phpMyAdmin;Uid=root;";
+        
 
 
-        public MySqlConnection getConnection(){
+        public static MySqlConnection getConnection(){
+            string sql = "Server=localhost;Database=phpMyAdmin;Uid=root;";
             MySqlConnection con = new MySqlConnection(sql);
            
             return con;
             }
         }
     }
-}
+

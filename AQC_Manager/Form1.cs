@@ -25,8 +25,13 @@ namespace AQC_Manager
 
         private void button1_Click(object sender, EventArgs e)
         {
+            MySqlConnection con = database.getConnection();
 
+        }
 
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            mainStage.SelectedIndex = 0;
         }
     }
 }
