@@ -57,10 +57,34 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="employeesList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="employeesList.Designer.cs">
+      <DependentUpon>employeesList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="newEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newEmployee.Designer.cs">
+      <DependentUpon>newEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="viewEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewEmployee.Designer.cs">
+      <DependentUpon>viewEmployee.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employeesList.resx">
+      <DependentUpon>employeesList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newEmployee.resx">
+      <DependentUpon>newEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -70,7 +94,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="viewEmployee.resx">
+      <DependentUpon>viewEmployee.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -80,6 +108,15 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20150816223052.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

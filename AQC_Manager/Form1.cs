@@ -23,15 +23,36 @@ namespace AQC_Manager
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MySqlConnection con = database.getConnection();
-
-        }
-
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            mainStage.SelectedIndex = 0;
+            employeesList nx = new employeesList();
+            
+
+            nx.Show();
+            nx.MdiParent = this;
         }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            viewEmployee nx = new viewEmployee();
+
+
+            nx.Show();
+            nx.MdiParent = this;
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            newEmployee nx = new newEmployee();
+
+
+            nx.Show();
+            nx.MdiParent = this;
+        }
+
+
+
+
+
     }
 }

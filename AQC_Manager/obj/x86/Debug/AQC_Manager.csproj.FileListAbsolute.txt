@@ -6,3 +6,6 @@ C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\
 C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\obj\x86\Debug\AQC_Manager.csproj.GenerateResource.Cache
 C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\obj\x86\Debug\AQC_Manager.exe
 C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\obj\x86\Debug\AQC_Manager.pdb
+C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\obj\x86\Debug\AQC_Manager.employeesList.resources
+C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\obj\x86\Debug\AQC_Manager.viewEmployee.resources
+C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\obj\x86\Debug\AQC_Manager.newEmployee.resources

@@ -13,7 +13,7 @@ namespace AQC_Manager
 
 
         public static MySqlConnection getConnection(){
-            string sql = "Server=localhost;Database=phpMyAdmin;Uid=root;";
+            string sql = "Server=localhost;Database=aqc_manager;Uid=root;";
             MySqlConnection con = new MySqlConnection(sql);
            
             return con;
