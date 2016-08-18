@@ -107,6 +107,9 @@
             this.label34 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.x1R = new System.Windows.Forms.PictureBox();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.empPicture)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -115,6 +118,7 @@
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.x1R)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -286,6 +290,7 @@
             this.empPicture.Location = new System.Drawing.Point(437, 19);
             this.empPicture.Name = "empPicture";
             this.empPicture.Size = new System.Drawing.Size(147, 184);
+            this.empPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.empPicture.TabIndex = 4;
             this.empPicture.TabStop = false;
             // 
@@ -297,6 +302,7 @@
             this.browseImage.TabIndex = 5;
             this.browseImage.Text = "Browse Picture";
             this.browseImage.UseVisualStyleBackColor = true;
+            this.browseImage.Click += new System.EventHandler(this.browseImage_Click);
             // 
             // groupBox1
             // 
@@ -844,11 +850,42 @@
             this.label32.TabIndex = 0;
             this.label32.Text = "Branch:";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(327, 640);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(141, 38);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // x1R
+            // 
+            this.x1R.Location = new System.Drawing.Point(665, 238);
+            this.x1R.Name = "x1R";
+            this.x1R.Size = new System.Drawing.Size(136, 187);
+            this.x1R.TabIndex = 9;
+            this.x1R.TabStop = false;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(665, 445);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(135, 25);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // newEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(618, 752);
+            this.ClientSize = new System.Drawing.Size(819, 702);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.x1R);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox6);
@@ -874,6 +911,7 @@
             this.groupBox6.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.x1R)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -959,5 +997,8 @@
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox x1R;
+        private System.Windows.Forms.Button button2;
     }
 }

@@ -106,7 +106,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImage = global::AQC_Manager.Properties.Resources._20150816223052;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(632, 490);
             this.Controls.Add(this.toolStrip1);
             this.IsMdiContainer = true;
