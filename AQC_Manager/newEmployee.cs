@@ -79,11 +79,18 @@ namespace AQC_Manager
             {
                 conn.Open();
                 RD = cmd.ExecuteReader();
-                MessageBox.Show("Saved");
+
 
                 while (RD.Read())
                 {
-
+                    byte[] imgg = (byte[])(RD["pic"]);
+                    if (imgg == null) { x1R.Image = null; }
+                    else
+                    {
+                        MemoryStream MS = new MemoryStream(imgg);
+                        x1R.Image = System.Drawing.Image.FromStream(MS);
+                        x1R.SizeMode = PictureBoxSizeMode.StretchImage;
+                    }
                 }
                 conn.Close();
             }
