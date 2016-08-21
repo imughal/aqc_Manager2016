@@ -108,8 +108,6 @@
             this.label33 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.x1R = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.empPicture)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -118,7 +116,6 @@
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.x1R)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -287,16 +284,16 @@
             // empPicture
             // 
             this.empPicture.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.empPicture.Location = new System.Drawing.Point(437, 19);
+            this.empPicture.Location = new System.Drawing.Point(437, 24);
             this.empPicture.Name = "empPicture";
-            this.empPicture.Size = new System.Drawing.Size(147, 184);
+            this.empPicture.Size = new System.Drawing.Size(150, 175);
             this.empPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.empPicture.TabIndex = 4;
             this.empPicture.TabStop = false;
             // 
             // browseImage
             // 
-            this.browseImage.Location = new System.Drawing.Point(452, 174);
+            this.browseImage.Location = new System.Drawing.Point(452, 168);
             this.browseImage.Name = "browseImage";
             this.browseImage.Size = new System.Drawing.Size(117, 25);
             this.browseImage.TabIndex = 5;
@@ -860,31 +857,11 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // x1R
-            // 
-            this.x1R.Location = new System.Drawing.Point(665, 238);
-            this.x1R.Name = "x1R";
-            this.x1R.Size = new System.Drawing.Size(136, 187);
-            this.x1R.TabIndex = 9;
-            this.x1R.TabStop = false;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(665, 445);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(135, 25);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // newEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(819, 702);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.x1R);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox7);
@@ -911,7 +888,6 @@
             this.groupBox6.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.x1R)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -998,7 +974,5 @@
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PictureBox x1R;
-        private System.Windows.Forms.Button button2;
     }
 }

@@ -8,6 +8,8 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO;
 using MySql.Data.MySqlClient;
+using System.Drawing.Drawing2D;
+using System.Drawing.Imaging;
 
 namespace AQC_Manager
 {
@@ -20,10 +22,15 @@ namespace AQC_Manager
         public string fileName;
         private void button1_Click(object sender, EventArgs e)
         {
-            byte[] im = null;
-            FileStream fs = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-            BinaryReader br = new BinaryReader(fs);
-            im = br.ReadBytes((int)fs.Length);
+           // byte[] im = null;
+           // FileStream fs = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+           // BinaryReader br = new BinaryReader(fs);
+           // im = br.ReadBytes((int)fs.Length);
+            Image ss = System.Drawing.Image.FromFile(fileName);
+            Bitmap bi = ResizeImage(ss, 150, 175);
+
+            MemoryStream ms = new MemoryStream();
+            bi.Save(ms, System.Drawing.Imaging.ImageFormat.Gif);
 
 
             String sqlQ = "insert into employee_pic (employee_id, pic) values ('imran',@IMG);";
@@ -34,7 +41,7 @@ namespace AQC_Manager
             try
             {
                 conn.Open();
-                cmd.Parameters.Add(new MySqlParameter("@IMG", im));
+                cmd.Parameters.Add(new MySqlParameter("@IMG", ms.ToArray()));
                 RD = cmd.ExecuteReader();
                 MessageBox.Show("Saved");
 
@@ -68,36 +75,30 @@ namespace AQC_Manager
             } 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+
+        public static Bitmap ResizeImage(Image image, int width, int height)
         {
-            String sqlQ = "select * FROM employee_pic WHERE id = 1";
-            MySqlConnection conn = database.getConnection();
-            MySqlCommand cmd = new MySqlCommand(sqlQ, conn);
-            MySqlDataReader RD;
+            var destRect = new Rectangle(0, 0, width, height);
+            var destImage = new Bitmap(width, height);
 
-            try
+            destImage.SetResolution(image.HorizontalResolution, image.VerticalResolution);
+
+            using (var graphics = Graphics.FromImage(destImage))
             {
-                conn.Open();
-                RD = cmd.ExecuteReader();
+                graphics.CompositingMode = CompositingMode.SourceCopy;
+                graphics.CompositingQuality = CompositingQuality.HighQuality;
+                graphics.InterpolationMode = InterpolationMode.HighQualityBicubic;
+                graphics.SmoothingMode = SmoothingMode.HighQuality;
+                graphics.PixelOffsetMode = PixelOffsetMode.HighQuality;
 
-
-                while (RD.Read())
+                using (var wrapMode = new ImageAttributes())
                 {
-                    byte[] imgg = (byte[])(RD["pic"]);
-                    if (imgg == null) { x1R.Image = null; }
-                    else
-                    {
-                        MemoryStream MS = new MemoryStream(imgg);
-                        x1R.Image = System.Drawing.Image.FromStream(MS);
-                        x1R.SizeMode = PictureBoxSizeMode.StretchImage;
-                    }
+                    wrapMode.SetWrapMode(WrapMode.TileFlipXY);
+                    graphics.DrawImage(image, destRect, 0, 0, image.Width, image.Height, GraphicsUnit.Pixel, wrapMode);
                 }
-                conn.Close();
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
+
+            return destImage;
         }
     }
 }
