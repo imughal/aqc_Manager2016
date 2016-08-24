@@ -107,7 +107,12 @@
             this.label34 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
+            this.Save = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.empId = new System.Windows.Forms.TextBox();
+            this.label36 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.empPicture)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -268,6 +273,9 @@
             // empSex
             // 
             this.empSex.FormattingEnabled = true;
+            this.empSex.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
             this.empSex.Location = new System.Drawing.Point(315, 118);
             this.empSex.Name = "empSex";
             this.empSex.Size = new System.Drawing.Size(105, 21);
@@ -276,6 +284,9 @@
             // EmpShadi
             // 
             this.EmpShadi.FormattingEnabled = true;
+            this.EmpShadi.Items.AddRange(new object[] {
+            "Single",
+            "Married"});
             this.EmpShadi.Location = new System.Drawing.Point(118, 118);
             this.EmpShadi.Name = "EmpShadi";
             this.EmpShadi.Size = new System.Drawing.Size(105, 21);
@@ -325,7 +336,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(12, 34);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(594, 212);
             this.groupBox1.TabIndex = 6;
@@ -340,7 +351,7 @@
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.passportExpiryDate);
             this.groupBox2.Controls.Add(this.passportIssueDate);
-            this.groupBox2.Location = new System.Drawing.Point(14, 240);
+            this.groupBox2.Location = new System.Drawing.Point(14, 262);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(238, 107);
             this.groupBox2.TabIndex = 7;
@@ -405,7 +416,7 @@
             this.groupBox3.Controls.Add(this.IDExpiryDate);
             this.groupBox3.Controls.Add(this.label15);
             this.groupBox3.Controls.Add(this.label14);
-            this.groupBox3.Location = new System.Drawing.Point(258, 240);
+            this.groupBox3.Location = new System.Drawing.Point(258, 262);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(237, 107);
             this.groupBox3.TabIndex = 7;
@@ -471,7 +482,7 @@
             this.groupBox4.Controls.Add(this.visaIssueDate);
             this.groupBox4.Controls.Add(this.label18);
             this.groupBox4.Controls.Add(this.label19);
-            this.groupBox4.Location = new System.Drawing.Point(15, 353);
+            this.groupBox4.Location = new System.Drawing.Point(15, 375);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(237, 125);
             this.groupBox4.TabIndex = 7;
@@ -554,7 +565,7 @@
             this.groupBox5.Controls.Add(this.damanIssueDate);
             this.groupBox5.Controls.Add(this.label23);
             this.groupBox5.Controls.Add(this.label24);
-            this.groupBox5.Location = new System.Drawing.Point(258, 353);
+            this.groupBox5.Location = new System.Drawing.Point(258, 375);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(237, 125);
             this.groupBox5.TabIndex = 7;
@@ -608,6 +619,7 @@
             this.damanIssueDate.Name = "damanIssueDate";
             this.damanIssueDate.Size = new System.Drawing.Size(114, 20);
             this.damanIssueDate.TabIndex = 2;
+            this.damanIssueDate.Value = new System.DateTime(2016, 8, 22, 0, 0, 0, 0);
             // 
             // label23
             // 
@@ -637,7 +649,7 @@
             this.groupBox6.Controls.Add(this.laborIssueDate);
             this.groupBox6.Controls.Add(this.label27);
             this.groupBox6.Controls.Add(this.label28);
-            this.groupBox6.Location = new System.Drawing.Point(258, 484);
+            this.groupBox6.Location = new System.Drawing.Point(258, 506);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(237, 125);
             this.groupBox6.TabIndex = 7;
@@ -726,9 +738,9 @@
             this.groupBox7.Controls.Add(this.label34);
             this.groupBox7.Controls.Add(this.label33);
             this.groupBox7.Controls.Add(this.label32);
-            this.groupBox7.Location = new System.Drawing.Point(15, 484);
+            this.groupBox7.Location = new System.Drawing.Point(15, 506);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(237, 222);
+            this.groupBox7.Size = new System.Drawing.Size(237, 209);
             this.groupBox7.TabIndex = 7;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "WPS Information";
@@ -847,23 +859,74 @@
             this.label32.TabIndex = 0;
             this.label32.Text = "Branch:";
             // 
+            // Save
+            // 
+            this.Save.Location = new System.Drawing.Point(258, 637);
+            this.Save.Name = "Save";
+            this.Save.Size = new System.Drawing.Size(113, 36);
+            this.Save.TabIndex = 8;
+            this.Save.Text = "Save";
+            this.Save.UseVisualStyleBackColor = true;
+            this.Save.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(382, 638);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(113, 36);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "Clear All";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(258, 679);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(237, 36);
+            this.button3.TabIndex = 8;
+            this.button3.Text = "Cancel";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(327, 640);
+            this.button1.Location = new System.Drawing.Point(532, 311);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(141, 38);
-            this.button1.TabIndex = 8;
+            this.button1.Size = new System.Drawing.Size(48, 57);
+            this.button1.TabIndex = 9;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // empId
+            // 
+            this.empId.Location = new System.Drawing.Point(130, 8);
+            this.empId.Name = "empId";
+            this.empId.Size = new System.Drawing.Size(102, 20);
+            this.empId.TabIndex = 1;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(24, 11);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(67, 13);
+            this.label36.TabIndex = 10;
+            this.label36.Text = "Employee ID";
             // 
             // newEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(819, 702);
+            this.ClientSize = new System.Drawing.Size(618, 740);
+            this.Controls.Add(this.label36);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.Save);
             this.Controls.Add(this.groupBox5);
+            this.Controls.Add(this.empId);
             this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox4);
@@ -889,6 +952,7 @@
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -973,6 +1037,11 @@
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Button Save;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox empId;
+        private System.Windows.Forms.Label label36;
     }
 }
