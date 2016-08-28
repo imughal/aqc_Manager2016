@@ -69,8 +69,8 @@ namespace AQC_Manager
             DateTime wpsExpiryDateX = wpsExpiryDate.Value;
 
 
-            if (isEm())
-            {
+            //if (isEm())
+            //{
                 //Databases Inserting
 
                 String sql = "INSERT INTO `aqc_manager`.`employees` (`employee_id`, `name`, `fathername`, `nationality`, `religion`, `maritial`, `sex`, `dateOfBirth`, `mobile`, `emergency`, `homeTel`, `passportNumber`, `passportIssue`, `passportExpiry`, `iDnumber`, `iDCardNumber`, `iDExpiry`, `visaOccupation`, `visaNumber`, `visaIssue`, `visaExpiry`, `damanNumber`, `policyNumber`, `damanIssue`, `damanExpiry`, `personCode`, `laborCardNumber`, `laborIssue`, `laborExpiry`, `wpsBank`, `wpsBranch`, `wpsAccount`, `wpsIBAN`, `wpsCard`, `wpsIssueDate`,`wpsExpiryDate`) VALUES (@empID, @empName, @empFather, @nation, @relg, @maritial, @sex, @DOB, @mble, @ICE, @home, @passNum, @passIssue, @passExpire, @IDNum, @IDCardNum, @IDExpire, @visaOccu, @vissaNum, @visaIss, @visaExiry, @damanNum, @policyNum, @damanIss, @damanExpire, @personC, @laborCardNum, @laborIss, @laborExpire, @wpsBankk, @wpsBranchh, @wpsAcc, @wpsIbann, @wpsCardd, @wpsIssue, @wpsExpire);";
@@ -200,7 +200,7 @@ namespace AQC_Manager
                 {
                     MessageBox.Show(ex.ToString());
                 }
-            }
+           // }
         }
         private void browseImage_Click(object sender, EventArgs e)
         {
