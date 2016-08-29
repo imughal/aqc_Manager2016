@@ -178,7 +178,7 @@ namespace AQC_Manager
                 bi.Save(ms, System.Drawing.Imaging.ImageFormat.Gif);
 
 
-                String sqlQ = "insert into employee_pic (employee_id, pic) values ('imran',@IMG);";
+                String sqlQ = "insert into employee_pic (employee_id, pic) values (@empID,@IMG);";
                 MySqlConnection conn = database.getConnection();
                 MySqlCommand cmd = new MySqlCommand(sqlQ, conn);
                 MySqlDataReader RD;
@@ -186,6 +186,7 @@ namespace AQC_Manager
                 try
                 {
                     conn.Open();
+                    cmd.Parameters.Add(new MySqlParameter("@empID", empId.Text));
                     cmd.Parameters.Add(new MySqlParameter("@IMG", ms.ToArray()));
                     RD = cmd.ExecuteReader();
                     MessageBox.Show("Saved");

@@ -44,6 +44,8 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label21 = new System.Windows.Forms.Label();
+            this.damanExpiryDate = new System.Windows.Forms.TextBox();
+            this.damanIssueDate = new System.Windows.Forms.TextBox();
             this.policyNumber = new System.Windows.Forms.TextBox();
             this.damanNumber = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
@@ -51,6 +53,8 @@
             this.label24 = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.label29 = new System.Windows.Forms.Label();
+            this.wpsExpiryDate = new System.Windows.Forms.TextBox();
+            this.wpsIssueDate = new System.Windows.Forms.TextBox();
             this.wpsCardNumber = new System.Windows.Forms.TextBox();
             this.wpsIBAN = new System.Windows.Forms.TextBox();
             this.wpsAccountNumber = new System.Windows.Forms.TextBox();
@@ -64,6 +68,8 @@
             this.label32 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.label25 = new System.Windows.Forms.Label();
+            this.laborExpiryDate = new System.Windows.Forms.TextBox();
+            this.laborIssueDate = new System.Windows.Forms.TextBox();
             this.laborCardNumber = new System.Windows.Forms.TextBox();
             this.personCode = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
@@ -71,6 +77,8 @@
             this.label28 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label17 = new System.Windows.Forms.Label();
+            this.visaExpiryDate = new System.Windows.Forms.TextBox();
+            this.visaIssueDate = new System.Windows.Forms.TextBox();
             this.visaNumber = new System.Windows.Forms.TextBox();
             this.visaOccupation = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
@@ -78,12 +86,15 @@
             this.label19 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label16 = new System.Windows.Forms.Label();
+            this.IDExpiryDate = new System.Windows.Forms.TextBox();
             this.IDCardNumber = new System.Windows.Forms.TextBox();
             this.IDNumber = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.passportExpiryDate = new System.Windows.Forms.TextBox();
+            this.passportIssueDate = new System.Windows.Forms.TextBox();
             this.passportNumber = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -91,6 +102,9 @@
             this.empPicture = new System.Windows.Forms.PictureBox();
             this.empName = new System.Windows.Forms.TextBox();
             this.empFather = new System.Windows.Forms.TextBox();
+            this.empSex = new System.Windows.Forms.TextBox();
+            this.empDOB = new System.Windows.Forms.TextBox();
+            this.EmpShadi = new System.Windows.Forms.TextBox();
             this.empReligion = new System.Windows.Forms.TextBox();
             this.empCountry = new System.Windows.Forms.TextBox();
             this.empHomeNumber = new System.Windows.Forms.TextBox();
@@ -108,20 +122,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.empId = new System.Windows.Forms.TextBox();
-            this.empDOB = new System.Windows.Forms.TextBox();
-            this.EmpShadi = new System.Windows.Forms.TextBox();
-            this.empSex = new System.Windows.Forms.TextBox();
-            this.passportIssueDate = new System.Windows.Forms.TextBox();
-            this.passportExpiryDate = new System.Windows.Forms.TextBox();
-            this.IDExpiryDate = new System.Windows.Forms.TextBox();
-            this.visaIssueDate = new System.Windows.Forms.TextBox();
-            this.visaExpiryDate = new System.Windows.Forms.TextBox();
-            this.damanIssueDate = new System.Windows.Forms.TextBox();
-            this.damanExpiryDate = new System.Windows.Forms.TextBox();
-            this.laborIssueDate = new System.Windows.Forms.TextBox();
-            this.laborExpiryDate = new System.Windows.Forms.TextBox();
-            this.wpsIssueDate = new System.Windows.Forms.TextBox();
-            this.wpsExpiryDate = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.mysqlBI)).BeginInit();
             this.mysqlBI.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -273,6 +273,22 @@
             this.label21.TabIndex = 0;
             this.label21.Text = "Daman Number:";
             // 
+            // damanExpiryDate
+            // 
+            this.damanExpiryDate.Location = new System.Drawing.Point(106, 100);
+            this.damanExpiryDate.Name = "damanExpiryDate";
+            this.damanExpiryDate.ReadOnly = true;
+            this.damanExpiryDate.Size = new System.Drawing.Size(114, 20);
+            this.damanExpiryDate.TabIndex = 24;
+            // 
+            // damanIssueDate
+            // 
+            this.damanIssueDate.Location = new System.Drawing.Point(106, 74);
+            this.damanIssueDate.Name = "damanIssueDate";
+            this.damanIssueDate.ReadOnly = true;
+            this.damanIssueDate.Size = new System.Drawing.Size(114, 20);
+            this.damanIssueDate.TabIndex = 24;
+            // 
             // policyNumber
             // 
             this.policyNumber.Location = new System.Drawing.Point(106, 46);
@@ -347,6 +363,22 @@
             this.label29.Size = new System.Drawing.Size(35, 13);
             this.label29.TabIndex = 0;
             this.label29.Text = "Bank:";
+            // 
+            // wpsExpiryDate
+            // 
+            this.wpsExpiryDate.Location = new System.Drawing.Point(103, 178);
+            this.wpsExpiryDate.Name = "wpsExpiryDate";
+            this.wpsExpiryDate.ReadOnly = true;
+            this.wpsExpiryDate.Size = new System.Drawing.Size(184, 20);
+            this.wpsExpiryDate.TabIndex = 31;
+            // 
+            // wpsIssueDate
+            // 
+            this.wpsIssueDate.Location = new System.Drawing.Point(103, 152);
+            this.wpsIssueDate.Name = "wpsIssueDate";
+            this.wpsIssueDate.ReadOnly = true;
+            this.wpsIssueDate.Size = new System.Drawing.Size(184, 20);
+            this.wpsIssueDate.TabIndex = 31;
             // 
             // wpsCardNumber
             // 
@@ -468,6 +500,22 @@
             this.label25.TabIndex = 0;
             this.label25.Text = "Person Code:";
             // 
+            // laborExpiryDate
+            // 
+            this.laborExpiryDate.Location = new System.Drawing.Point(106, 100);
+            this.laborExpiryDate.Name = "laborExpiryDate";
+            this.laborExpiryDate.ReadOnly = true;
+            this.laborExpiryDate.Size = new System.Drawing.Size(114, 20);
+            this.laborExpiryDate.TabIndex = 35;
+            // 
+            // laborIssueDate
+            // 
+            this.laborIssueDate.Location = new System.Drawing.Point(106, 74);
+            this.laborIssueDate.Name = "laborIssueDate";
+            this.laborIssueDate.ReadOnly = true;
+            this.laborIssueDate.Size = new System.Drawing.Size(114, 20);
+            this.laborIssueDate.TabIndex = 35;
+            // 
             // laborCardNumber
             // 
             this.laborCardNumber.Location = new System.Drawing.Point(106, 46);
@@ -537,6 +585,22 @@
             this.label17.TabIndex = 0;
             this.label17.Text = "Occupation:";
             // 
+            // visaExpiryDate
+            // 
+            this.visaExpiryDate.Location = new System.Drawing.Point(103, 100);
+            this.visaExpiryDate.Name = "visaExpiryDate";
+            this.visaExpiryDate.ReadOnly = true;
+            this.visaExpiryDate.Size = new System.Drawing.Size(184, 20);
+            this.visaExpiryDate.TabIndex = 20;
+            // 
+            // visaIssueDate
+            // 
+            this.visaIssueDate.Location = new System.Drawing.Point(103, 74);
+            this.visaIssueDate.Name = "visaIssueDate";
+            this.visaIssueDate.ReadOnly = true;
+            this.visaIssueDate.Size = new System.Drawing.Size(184, 20);
+            this.visaIssueDate.TabIndex = 20;
+            // 
             // visaNumber
             // 
             this.visaNumber.Location = new System.Drawing.Point(103, 46);
@@ -604,6 +668,14 @@
             this.label16.TabIndex = 0;
             this.label16.Text = "ID Number:";
             // 
+            // IDExpiryDate
+            // 
+            this.IDExpiryDate.Location = new System.Drawing.Point(106, 74);
+            this.IDExpiryDate.Name = "IDExpiryDate";
+            this.IDExpiryDate.ReadOnly = true;
+            this.IDExpiryDate.Size = new System.Drawing.Size(114, 20);
+            this.IDExpiryDate.TabIndex = 17;
+            // 
             // IDCardNumber
             // 
             this.IDCardNumber.Location = new System.Drawing.Point(106, 46);
@@ -661,6 +733,22 @@
             this.label6.Size = new System.Drawing.Size(91, 13);
             this.label6.TabIndex = 0;
             this.label6.Text = "Passport Number:";
+            // 
+            // passportExpiryDate
+            // 
+            this.passportExpiryDate.Location = new System.Drawing.Point(104, 74);
+            this.passportExpiryDate.Name = "passportExpiryDate";
+            this.passportExpiryDate.ReadOnly = true;
+            this.passportExpiryDate.Size = new System.Drawing.Size(184, 20);
+            this.passportExpiryDate.TabIndex = 13;
+            // 
+            // passportIssueDate
+            // 
+            this.passportIssueDate.Location = new System.Drawing.Point(104, 47);
+            this.passportIssueDate.Name = "passportIssueDate";
+            this.passportIssueDate.ReadOnly = true;
+            this.passportIssueDate.Size = new System.Drawing.Size(184, 20);
+            this.passportIssueDate.TabIndex = 13;
             // 
             // passportNumber
             // 
@@ -744,6 +832,32 @@
             this.empFather.ReadOnly = true;
             this.empFather.Size = new System.Drawing.Size(302, 20);
             this.empFather.TabIndex = 3;
+            // 
+            // empSex
+            // 
+            this.empSex.Location = new System.Drawing.Point(315, 118);
+            this.empSex.Name = "empSex";
+            this.empSex.ReadOnly = true;
+            this.empSex.Size = new System.Drawing.Size(105, 20);
+            this.empSex.TabIndex = 4;
+            // 
+            // empDOB
+            // 
+            this.empDOB.Location = new System.Drawing.Point(315, 85);
+            this.empDOB.MaxLength = 10;
+            this.empDOB.Name = "empDOB";
+            this.empDOB.ReadOnly = true;
+            this.empDOB.Size = new System.Drawing.Size(105, 20);
+            this.empDOB.TabIndex = 4;
+            this.empDOB.WordWrap = false;
+            // 
+            // EmpShadi
+            // 
+            this.EmpShadi.Location = new System.Drawing.Point(118, 118);
+            this.EmpShadi.Name = "EmpShadi";
+            this.EmpShadi.ReadOnly = true;
+            this.EmpShadi.Size = new System.Drawing.Size(105, 20);
+            this.EmpShadi.TabIndex = 4;
             // 
             // empReligion
             // 
@@ -893,118 +1007,7 @@
             this.empId.TabIndex = 52;
             this.empId.Text = "AQE-";
             this.empId.WordWrap = false;
-            // 
-            // empDOB
-            // 
-            this.empDOB.Location = new System.Drawing.Point(315, 85);
-            this.empDOB.Name = "empDOB";
-            this.empDOB.ReadOnly = true;
-            this.empDOB.Size = new System.Drawing.Size(105, 20);
-            this.empDOB.TabIndex = 4;
-            // 
-            // EmpShadi
-            // 
-            this.EmpShadi.Location = new System.Drawing.Point(118, 118);
-            this.EmpShadi.Name = "EmpShadi";
-            this.EmpShadi.ReadOnly = true;
-            this.EmpShadi.Size = new System.Drawing.Size(105, 20);
-            this.EmpShadi.TabIndex = 4;
-            // 
-            // empSex
-            // 
-            this.empSex.Location = new System.Drawing.Point(315, 118);
-            this.empSex.Name = "empSex";
-            this.empSex.ReadOnly = true;
-            this.empSex.Size = new System.Drawing.Size(105, 20);
-            this.empSex.TabIndex = 4;
-            // 
-            // passportIssueDate
-            // 
-            this.passportIssueDate.Location = new System.Drawing.Point(104, 47);
-            this.passportIssueDate.Name = "passportIssueDate";
-            this.passportIssueDate.ReadOnly = true;
-            this.passportIssueDate.Size = new System.Drawing.Size(184, 20);
-            this.passportIssueDate.TabIndex = 13;
-            // 
-            // passportExpiryDate
-            // 
-            this.passportExpiryDate.Location = new System.Drawing.Point(104, 74);
-            this.passportExpiryDate.Name = "passportExpiryDate";
-            this.passportExpiryDate.ReadOnly = true;
-            this.passportExpiryDate.Size = new System.Drawing.Size(184, 20);
-            this.passportExpiryDate.TabIndex = 13;
-            // 
-            // IDExpiryDate
-            // 
-            this.IDExpiryDate.Location = new System.Drawing.Point(106, 74);
-            this.IDExpiryDate.Name = "IDExpiryDate";
-            this.IDExpiryDate.ReadOnly = true;
-            this.IDExpiryDate.Size = new System.Drawing.Size(114, 20);
-            this.IDExpiryDate.TabIndex = 17;
-            // 
-            // visaIssueDate
-            // 
-            this.visaIssueDate.Location = new System.Drawing.Point(103, 74);
-            this.visaIssueDate.Name = "visaIssueDate";
-            this.visaIssueDate.ReadOnly = true;
-            this.visaIssueDate.Size = new System.Drawing.Size(184, 20);
-            this.visaIssueDate.TabIndex = 20;
-            // 
-            // visaExpiryDate
-            // 
-            this.visaExpiryDate.Location = new System.Drawing.Point(103, 100);
-            this.visaExpiryDate.Name = "visaExpiryDate";
-            this.visaExpiryDate.ReadOnly = true;
-            this.visaExpiryDate.Size = new System.Drawing.Size(184, 20);
-            this.visaExpiryDate.TabIndex = 20;
-            // 
-            // damanIssueDate
-            // 
-            this.damanIssueDate.Location = new System.Drawing.Point(106, 74);
-            this.damanIssueDate.Name = "damanIssueDate";
-            this.damanIssueDate.ReadOnly = true;
-            this.damanIssueDate.Size = new System.Drawing.Size(114, 20);
-            this.damanIssueDate.TabIndex = 24;
-            // 
-            // damanExpiryDate
-            // 
-            this.damanExpiryDate.Location = new System.Drawing.Point(106, 100);
-            this.damanExpiryDate.Name = "damanExpiryDate";
-            this.damanExpiryDate.ReadOnly = true;
-            this.damanExpiryDate.Size = new System.Drawing.Size(114, 20);
-            this.damanExpiryDate.TabIndex = 24;
-            // 
-            // laborIssueDate
-            // 
-            this.laborIssueDate.Location = new System.Drawing.Point(106, 74);
-            this.laborIssueDate.Name = "laborIssueDate";
-            this.laborIssueDate.ReadOnly = true;
-            this.laborIssueDate.Size = new System.Drawing.Size(114, 20);
-            this.laborIssueDate.TabIndex = 35;
-            // 
-            // laborExpiryDate
-            // 
-            this.laborExpiryDate.Location = new System.Drawing.Point(106, 100);
-            this.laborExpiryDate.Name = "laborExpiryDate";
-            this.laborExpiryDate.ReadOnly = true;
-            this.laborExpiryDate.Size = new System.Drawing.Size(114, 20);
-            this.laborExpiryDate.TabIndex = 35;
-            // 
-            // wpsIssueDate
-            // 
-            this.wpsIssueDate.Location = new System.Drawing.Point(103, 152);
-            this.wpsIssueDate.Name = "wpsIssueDate";
-            this.wpsIssueDate.ReadOnly = true;
-            this.wpsIssueDate.Size = new System.Drawing.Size(184, 20);
-            this.wpsIssueDate.TabIndex = 31;
-            // 
-            // wpsExpiryDate
-            // 
-            this.wpsExpiryDate.Location = new System.Drawing.Point(103, 178);
-            this.wpsExpiryDate.Name = "wpsExpiryDate";
-            this.wpsExpiryDate.ReadOnly = true;
-            this.wpsExpiryDate.Size = new System.Drawing.Size(184, 20);
-            this.wpsExpiryDate.TabIndex = 31;
+            this.empId.TextChanged += new System.EventHandler(this.empId_TextChanged);
             // 
             // viewEmployee
             // 

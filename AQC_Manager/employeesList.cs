@@ -45,9 +45,9 @@ namespace AQC_Manager
                         break;
                 }
             }
-
+            String sql = "SELECT employee_id AS 'Employee ID', name AS 'Name',fathername AS 'Father Name', sex AS 'Gender', dateOfBirth as 'Date of Birth', nationality as 'Nationality', religion as 'Religion' FROM aqc_manager.employees";
             DataSet DS = new DataSet();
-            MySqlDataAdapter myDA = new MySqlDataAdapter("select * from employees", con);
+            MySqlDataAdapter myDA = new MySqlDataAdapter(sql, con);
             myDA.Fill(DS);
             employeesShow.DataSource = DS.Tables[0];
 
@@ -60,6 +60,28 @@ namespace AQC_Manager
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string searchValue = textBox1.Text;
+
+            employeesShow.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            try
+            {
+                foreach (DataGridViewRow row in employeesShow.Rows)
+                {
+                    if (row.Cells[2].Value.ToString().Equals(searchValue))
+                    {
+                        row.Selected = true;
+                        break;
+                    }
+                }
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
             }
         }
     }

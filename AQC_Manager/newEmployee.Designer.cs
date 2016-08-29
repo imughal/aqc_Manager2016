@@ -340,7 +340,7 @@
             this.groupBox1.Location = new System.Drawing.Point(12, 34);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(594, 212);
-            this.groupBox1.TabIndex = 6;
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Personal Information";
             // 
@@ -355,7 +355,7 @@
             this.groupBox2.Location = new System.Drawing.Point(14, 262);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(238, 107);
-            this.groupBox2.TabIndex = 7;
+            this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Passport Information";
             // 
@@ -420,7 +420,7 @@
             this.groupBox3.Location = new System.Drawing.Point(258, 262);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(237, 107);
-            this.groupBox3.TabIndex = 7;
+            this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "ID Card Information";
             // 
@@ -486,7 +486,7 @@
             this.groupBox4.Location = new System.Drawing.Point(15, 375);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(237, 125);
-            this.groupBox4.TabIndex = 7;
+            this.groupBox4.TabIndex = 4;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "VISA Information";
             // 
@@ -569,7 +569,7 @@
             this.groupBox5.Location = new System.Drawing.Point(258, 375);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(237, 125);
-            this.groupBox5.TabIndex = 7;
+            this.groupBox5.TabIndex = 5;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Daman Information";
             // 
@@ -742,7 +742,7 @@
             this.groupBox7.Location = new System.Drawing.Point(15, 506);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(237, 209);
-            this.groupBox7.TabIndex = 7;
+            this.groupBox7.TabIndex = 6;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "WPS Information";
             // 
