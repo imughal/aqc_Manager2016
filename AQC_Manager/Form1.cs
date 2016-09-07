@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
+//using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
 namespace AQC_Manager
 {
-    public partial class Form1 : Form
+    public partial class mainWindow : Form
     {
-        public Form1()
+        public mainWindow()
         {
             InitializeComponent();
         }
@@ -46,6 +46,27 @@ namespace AQC_Manager
             newEmployee nx = new newEmployee();
 
 
+            nx.Show();
+            nx.MdiParent = this;
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+            filesViewer nx = new filesViewer();
+
+           
+            nx.Show();
+            nx.MdiParent = this;
+        }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            modifyEmployee nx = new modifyEmployee();
             nx.Show();
             nx.MdiParent = this;
         }

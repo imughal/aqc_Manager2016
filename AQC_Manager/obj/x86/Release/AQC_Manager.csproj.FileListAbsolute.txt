@@ -1,0 +1,12 @@
+C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\bin\Release\AQC_Manager.exe
+C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\bin\Release\AQC_Manager.pdb
+C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\bin\Release\MySql.Data.dll
+C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\obj\x86\Release\AQC_Manager.Form1.resources
+C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\obj\x86\Release\AQC_Manager.employeesList.resources
+C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\obj\x86\Release\AQC_Manager.newEmployee.resources
+C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\obj\x86\Release\AQC_Manager.Properties.Resources.resources
+C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\obj\x86\Release\AQC_Manager.viewEmployee.resources
+C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\obj\x86\Release\AQC_Manager.csproj.GenerateResource.Cache
+C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\obj\x86\Release\AQC_Manager.exe
+C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\obj\x86\Release\AQC_Manager.pdb
+C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\bin\Release\AQC_Manager.exe.config

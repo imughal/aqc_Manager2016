@@ -63,9 +63,9 @@ namespace AQC_Manager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _20150816223052 {
+        internal static System.Drawing.Bitmap _1432580807_free_17 {
             get {
-                object obj = ResourceManager.GetObject("20150816223052", resourceCulture);
+                object obj = ResourceManager.GetObject("1432580807_free-17", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

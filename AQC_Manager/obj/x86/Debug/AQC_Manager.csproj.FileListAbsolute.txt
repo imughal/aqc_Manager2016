@@ -1,7 +1,6 @@
 C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\bin\Debug\AQC_Manager.exe
 C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\bin\Debug\AQC_Manager.pdb
 C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\obj\x86\Debug\AQC_Manager.csprojResolveAssemblyReference.cache
-C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\obj\x86\Debug\AQC_Manager.Form1.resources
 C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\obj\x86\Debug\AQC_Manager.Properties.Resources.resources
 C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\obj\x86\Debug\AQC_Manager.csproj.GenerateResource.Cache
 C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\obj\x86\Debug\AQC_Manager.exe
@@ -10,3 +9,17 @@ C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\
 C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\obj\x86\Debug\AQC_Manager.viewEmployee.resources
 C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\obj\x86\Debug\AQC_Manager.newEmployee.resources
 C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\bin\Debug\MySql.Data.dll
+C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\bin\Debug\AQC_Manager.exe.config
+C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\bin\Debug\AQC_Manager.exe.manifest
+C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\bin\Debug\AQC_Manager.application
+C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\obj\x86\Debug\AQC_Manager.TrustInfo.xml
+C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\obj\x86\Debug\AQC_Manager.exe.manifest
+C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\obj\x86\Debug\AQC_Manager.application
+C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\obj\x86\Debug\AQC_Manager.filesViewer.resources
+C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\bin\Debug\Interop.AcroPDFLib.dll
+C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\bin\Debug\AxInterop.AcroPDFLib.dll
+C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\obj\x86\Debug\Interop.AcroPDFLib.dll
+C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\obj\x86\Debug\AxInterop.AcroPDFLib.dll
+C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\obj\x86\Debug\AQC_Manager.csproj.ResolveComReference.cache
+C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\obj\x86\Debug\AQC_Manager.modifyEmployee.resources
+C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\obj\x86\Debug\AQC_Manager.mainWindow.resources

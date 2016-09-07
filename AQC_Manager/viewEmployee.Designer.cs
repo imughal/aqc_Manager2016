@@ -158,7 +158,7 @@
             this.mysqlBI.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.mysqlBI.Name = "mysqlBI";
             this.mysqlBI.PositionItem = this.bindingNavigatorPositionItem;
-            this.mysqlBI.Size = new System.Drawing.Size(732, 25);
+            this.mysqlBI.Size = new System.Drawing.Size(615, 25);
             this.mysqlBI.TabIndex = 0;
             this.mysqlBI.Text = "bindingNavigator1";
             // 
@@ -808,7 +808,8 @@
             // 
             // empPicture
             // 
-            this.empPicture.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.empPicture.BackColor = System.Drawing.Color.Transparent;
+            this.empPicture.Image = global::AQC_Manager.Properties.Resources._1432580807_free_17;
             this.empPicture.Location = new System.Drawing.Point(437, 24);
             this.empPicture.Name = "empPicture";
             this.empPicture.Size = new System.Drawing.Size(150, 175);
@@ -1002,18 +1003,18 @@
             // 
             this.empId.Location = new System.Drawing.Point(118, 37);
             this.empId.Name = "empId";
-            this.empId.ReadOnly = true;
             this.empId.Size = new System.Drawing.Size(102, 20);
             this.empId.TabIndex = 52;
             this.empId.Text = "AQE-";
             this.empId.WordWrap = false;
             this.empId.TextChanged += new System.EventHandler(this.empId_TextChanged);
+            this.empId.KeyDown += new System.Windows.Forms.KeyEventHandler(this.empId_KeyDown);
             // 
             // viewEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(732, 740);
+            this.ClientSize = new System.Drawing.Size(615, 740);
             this.Controls.Add(this.label36);
             this.Controls.Add(this.empId);
             this.Controls.Add(this.groupBox5);

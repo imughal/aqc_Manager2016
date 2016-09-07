@@ -137,23 +137,7 @@ namespace AQC_Manager
                     //cmdP.Parameters.Add(new MySqlParameter("@IMG", ""));
 
 
-
-
-
-
-
-
-
                     RDP = cmdP.ExecuteReader();
-
-
-
-
-
-
-
-
-
 
 
                     connP.Close();
@@ -330,5 +314,11 @@ namespace AQC_Manager
         {
             MessageBox.Show(empName.Text);
         }
+
+        private void newEmployee_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+

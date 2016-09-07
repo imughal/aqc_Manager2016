@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
+//using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
@@ -13,11 +13,17 @@ namespace AQC_Manager
 {
     public partial class viewEmployee : Form
     {
+        public static String AQC_ID = "";
+        public viewEmployee(string emplo)
+        {
+            InitializeComponent();
+            AQC_ID = emplo;
+        }
         public viewEmployee()
         {
             InitializeComponent();
         }
-
+        //private BindingSource biS = new BindingSource();
         private void viewEmployee_Load(object sender, EventArgs e)
         {
             MySqlConnection con = database.getConnection();
@@ -78,8 +84,8 @@ namespace AQC_Manager
             passportExpiryDate.DataBindings.Add("Text", biS, "passportExpiry", true, DataSourceUpdateMode.OnValidation, "", "dd-MMM-yyyy");
 
             //ID Card Information
-            IDCardNumber.DataBindings.Add("Text", biS, "iDnumber");
-            IDNumber.DataBindings.Add("Text", biS, "iDCardNumber");
+            IDCardNumber.DataBindings.Add("Text", biS, "iDCardNumber");
+            IDNumber.DataBindings.Add("Text", biS, "iDnumber");
             IDExpiryDate.DataBindings.Add("Text", biS, "iDExpiry", true, DataSourceUpdateMode.OnValidation, "", "dd-MMM-yyyy");
 
             //Visa Information
@@ -109,6 +115,14 @@ namespace AQC_Manager
             wpsIssueDate.DataBindings.Add("Text", biS, "wpsIssueDate", true, DataSourceUpdateMode.OnValidation, "", "MMM-yyyy");
             wpsExpiryDate.DataBindings.Add("Text", biS, "wpsExpiryDate", true, DataSourceUpdateMode.OnValidation, "", "MMM-yyyy");
 
+
+
+            int index = biS.Find("employee_id", AQC_ID);
+
+            if (index >= 0)
+            {
+                biS.Position = index;
+            }
             try
             {
                 con.Close();
@@ -122,6 +136,7 @@ namespace AQC_Manager
 
         private void loadPic()
         {
+            empPicture.Image = AQC_Manager.Properties.Resources._1432580807_free_17;
             String sqlQ = "select * FROM employee_pic WHERE employee_id = @empID";
             //String sqlQ = "select * FROM employee_pic";
             MySqlConnection conn = database.getConnection();
@@ -139,13 +154,12 @@ namespace AQC_Manager
                 while (RD.Read())
                 {
                     byte[] imgg = (byte[])(RD["pic"]);
-                    if (imgg == null) { empPicture.Image = null; }
+                    if (imgg == null) {empPicture.Image = AQC_Manager.Properties.Resources._1432580807_free_17; }
                     else
                     {
                         MemoryStream MS = new MemoryStream(imgg);
                         empPicture.Image = System.Drawing.Image.FromStream(MS);
                         empPicture.SizeMode = PictureBoxSizeMode.StretchImage;
-
 
                     }
                 }
@@ -160,8 +174,19 @@ namespace AQC_Manager
         private void empId_TextChanged(object sender, EventArgs e)
         {
             loadPic();
+        }
 
+        private void empId_KeyDown(object sender, KeyEventArgs e)
+        {
+            //if (e.KeyCode == Keys.Enter)
+            //{
+            //    int index = biS.Find("employee_id", AQC_ID);
 
+            //    if (index >= 0)
+            //    {
+            //        biS.Position = index;
+            //    }
+            //}
         }
     }
 }
