@@ -35,9 +35,9 @@
             this.employeesShow = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.viewEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.editEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.employeesShow)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -86,6 +86,7 @@
             this.employeesShow.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.employeesShow.Size = new System.Drawing.Size(726, 457);
             this.employeesShow.TabIndex = 0;
+            this.employeesShow.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.employeesShow_CellMouseDoubleClick);
             this.employeesShow.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.employeesShow_CellMouseDown);
             this.employeesShow.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.employeesShow_RowPostPaint);
             // 
@@ -95,7 +96,7 @@
             this.viewEmployeeToolStripMenuItem,
             this.editEmployeeToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(155, 70);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(155, 48);
             // 
             // viewEmployeeToolStripMenuItem
             // 
@@ -103,6 +104,13 @@
             this.viewEmployeeToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.viewEmployeeToolStripMenuItem.Text = "&View Employee";
             this.viewEmployeeToolStripMenuItem.Click += new System.EventHandler(this.viewEmployeeToolStripMenuItem_Click);
+            // 
+            // editEmployeeToolStripMenuItem
+            // 
+            this.editEmployeeToolStripMenuItem.Name = "editEmployeeToolStripMenuItem";
+            this.editEmployeeToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.editEmployeeToolStripMenuItem.Text = "&Edit Employee";
+            this.editEmployeeToolStripMenuItem.Click += new System.EventHandler(this.editEmployeeToolStripMenuItem_Click);
             // 
             // textBox1
             // 
@@ -122,13 +130,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // editEmployeeToolStripMenuItem
-            // 
-            this.editEmployeeToolStripMenuItem.Name = "editEmployeeToolStripMenuItem";
-            this.editEmployeeToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
-            this.editEmployeeToolStripMenuItem.Text = "&Edit Employee";
-            this.editEmployeeToolStripMenuItem.Click += new System.EventHandler(this.editEmployeeToolStripMenuItem_Click);
-            // 
             // employeesList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -143,7 +144,7 @@
             this.MinimumSize = new System.Drawing.Size(766, 575);
             this.Name = "employeesList";
             this.ShowInTaskbar = false;
-            this.Text = "Form2";
+            this.Text = "All Employees";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.employeesShow)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);

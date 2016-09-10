@@ -23,3 +23,4 @@ C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\
 C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\obj\x86\Debug\AQC_Manager.csproj.ResolveComReference.cache
 C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\obj\x86\Debug\AQC_Manager.modifyEmployee.resources
 C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\obj\x86\Debug\AQC_Manager.mainWindow.resources
+C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\obj\x86\Debug\AQC_Manager.addFiles.resources

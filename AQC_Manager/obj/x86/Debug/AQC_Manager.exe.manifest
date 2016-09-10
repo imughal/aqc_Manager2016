@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AQC_Manager.exe" size="102912">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AQC_Manager.exe" size="110080">
       <assemblyIdentity name="AQC_Manager" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>eFm02cAbrlQR4TbSV+r0J6ANoLs=</dsig:DigestValue>
+        <dsig:DigestValue>Rz3tPs3qCKC32U/Gnq8LmiOI6bU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

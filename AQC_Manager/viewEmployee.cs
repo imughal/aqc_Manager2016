@@ -188,5 +188,14 @@ namespace AQC_Manager
             //    }
             //}
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            string a = empId.Text;
+            modifyEmployee ve = new modifyEmployee(a);
+            ve.Show();
+            ve.MdiParent = this.MdiParent;
+            this.Close();
+        }
     }
 }

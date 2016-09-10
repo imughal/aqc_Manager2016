@@ -66,9 +66,10 @@ namespace AQC_Manager
 
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
-            modifyEmployee nx = new modifyEmployee();
-            nx.Show();
-            nx.MdiParent = this;
+            addFiles aF = new addFiles();
+            aF.Show();
+            aF.MdiParent = this;
+
         }
 
 

@@ -9,11 +9,15 @@ namespace AQC_Manager
 {
     class database
     {
-        
 
+
+        public static String Server = "192.168.1.34";
+        public static String Database = "aqc_manager";
+        public static String UserID = "root";
+        public static String password = "";
 
         public static MySqlConnection getConnection(){
-            string sql = "Server=192.168.1.13;Database=aqc_manager;Uid=root;Convert Zero Datetime=True;";
+            string sql = "Server="+Server+";Database="+Database+";Uid="+UserID+";Convert Zero Datetime=True;";
             MySqlConnection con = new MySqlConnection(sql);
            
             return con;

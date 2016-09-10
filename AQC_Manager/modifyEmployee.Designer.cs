@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -48,8 +49,6 @@
             this.empDOB = new System.Windows.Forms.DateTimePicker();
             this.empSex = new System.Windows.Forms.ComboBox();
             this.EmpShadi = new System.Windows.Forms.ComboBox();
-            this.empPicture = new System.Windows.Forms.PictureBox();
-            this.browseImage = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -113,7 +112,9 @@
             this.empId = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.empPicture)).BeginInit();
+            this.browseImage = new System.Windows.Forms.Button();
+            this.empPicture = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -121,6 +122,7 @@
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.empPicture)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -292,26 +294,6 @@
             this.EmpShadi.Name = "EmpShadi";
             this.EmpShadi.Size = new System.Drawing.Size(105, 21);
             this.EmpShadi.TabIndex = 6;
-            // 
-            // empPicture
-            // 
-            this.empPicture.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.empPicture.Location = new System.Drawing.Point(437, 24);
-            this.empPicture.Name = "empPicture";
-            this.empPicture.Size = new System.Drawing.Size(150, 175);
-            this.empPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.empPicture.TabIndex = 4;
-            this.empPicture.TabStop = false;
-            // 
-            // browseImage
-            // 
-            this.browseImage.Location = new System.Drawing.Point(452, 168);
-            this.browseImage.Name = "browseImage";
-            this.browseImage.Size = new System.Drawing.Size(117, 25);
-            this.browseImage.TabIndex = 12;
-            this.browseImage.Text = "&Browse Picture";
-            this.browseImage.UseVisualStyleBackColor = true;
-            this.browseImage.Click += new System.EventHandler(this.browseImage_Click);
             // 
             // groupBox1
             // 
@@ -919,11 +901,40 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_2);
             // 
+            // browseImage
+            // 
+            this.browseImage.BackColor = System.Drawing.Color.Transparent;
+            this.browseImage.BackgroundImage = global::AQC_Manager.Properties.Resources.Change_User_Male;
+            this.browseImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.browseImage.FlatAppearance.BorderSize = 0;
+            this.browseImage.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.browseImage.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.browseImage.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.browseImage.Location = new System.Drawing.Point(452, 137);
+            this.browseImage.Name = "browseImage";
+            this.browseImage.Size = new System.Drawing.Size(55, 56);
+            this.browseImage.TabIndex = 12;
+            this.browseImage.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolTip1.SetToolTip(this.browseImage, "\"Change Picture\"");
+            this.browseImage.UseMnemonic = false;
+            this.browseImage.UseVisualStyleBackColor = false;
+            this.browseImage.Click += new System.EventHandler(this.browseImage_Click);
+            // 
+            // empPicture
+            // 
+            this.empPicture.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.empPicture.Location = new System.Drawing.Point(437, 24);
+            this.empPicture.Name = "empPicture";
+            this.empPicture.Size = new System.Drawing.Size(150, 175);
+            this.empPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.empPicture.TabIndex = 4;
+            this.empPicture.TabStop = false;
+            // 
             // modifyEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(618, 740);
+            this.ClientSize = new System.Drawing.Size(613, 740);
             this.Controls.Add(this.label36);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
@@ -938,10 +949,12 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(629, 778);
+            this.MinimumSize = new System.Drawing.Size(629, 778);
             this.Name = "modifyEmployee";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edit Employee";
             this.Load += new System.EventHandler(this.newEmployee_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.empPicture)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -956,6 +969,7 @@
             this.groupBox6.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.empPicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1048,5 +1062,6 @@
         private System.Windows.Forms.TextBox empId;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

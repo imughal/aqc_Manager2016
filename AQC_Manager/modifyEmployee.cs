@@ -21,6 +21,7 @@ namespace AQC_Manager
             InitializeComponent();
             AQC_ID = emplo;
             loadingDATA();
+            SetStyle(ControlStyles.SupportsTransparentBackColor, true);
         }
 
         public string fileName;
@@ -150,6 +151,7 @@ namespace AQC_Manager
                     RDP = cmdP.ExecuteReader();
 
                     connP.Close();
+
                 }
                 catch (Exception EX)
                 {
@@ -197,6 +199,12 @@ namespace AQC_Manager
                         MessageBox.Show(ex.ToString());
                     }
                 }
+
+                MessageBox.Show("Employee Edited Successfully.");
+                this.Close();
+                viewEmployee Ve = new viewEmployee(empId.Text);
+                Ve.Show();
+                Ve.MdiParent = this.MdiParent;
            // }
         }
         private void loadPic()
@@ -239,6 +247,7 @@ namespace AQC_Manager
         private void browseImage_Click(object sender, EventArgs e)
         {
             OpenFileDialog open = new OpenFileDialog();
+            open.Title = "Select Picture";
             // image filters
             open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
             if (open.ShowDialog() == DialogResult.OK)

@@ -87,6 +87,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addFiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addFiles.Designer.cs">
+      <DependentUpon>addFiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="allSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>allSettings.settings</DependentUpon>
+    </Compile>
     <Compile Include="modifyEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +137,9 @@
     <Compile Include="viewEmployee.Designer.cs">
       <DependentUpon>viewEmployee.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="addFiles.resx">
+      <DependentUpon>addFiles.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="modifyEmployee.resx">
       <DependentUpon>modifyEmployee.cs</DependentUpon>
     </EmbeddedResource>
@@ -154,6 +168,10 @@
     <EmbeddedResource Include="viewEmployee.resx">
       <DependentUpon>viewEmployee.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="allSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>allSettings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="app.config" />
     <None Include="AQC_Manager_TemporaryKey.pfx" />
     <None Include="Properties\app.manifest" />
@@ -212,6 +230,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1432580807_free-17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Change User Male.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit User Male.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add User Male.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

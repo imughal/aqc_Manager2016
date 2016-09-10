@@ -163,5 +163,22 @@ namespace AQC_Manager
                 ME.MdiParent = this.MdiParent;
             }
         }
+
+        private void employeesShow_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (employeesShow.SelectedCells.Count > 0)
+            {
+                int selectedrowindex = employeesShow.SelectedCells[0].RowIndex;
+
+                DataGridViewRow selectedRow = employeesShow.Rows[selectedrowindex];
+
+                string a = Convert.ToString(selectedRow.Cells["Employee ID"].Value);
+                //MessageBox.Show(a);
+                viewEmployee ve = new viewEmployee(a);
+                ve.Show();
+
+                ve.MdiParent = this.MdiParent;
+            }
+        }
     }
 }

@@ -190,6 +190,7 @@ namespace AQC_Manager
         private void browseImage_Click(object sender, EventArgs e)
         {
             OpenFileDialog open = new OpenFileDialog();
+            open.Title = "Select Image";
             // image filters
             open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
             if (open.ShowDialog() == DialogResult.OK)
