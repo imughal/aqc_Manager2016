@@ -6,6 +6,9 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.IO;
+using System.Drawing.Drawing2D;
+using System.Drawing.Imaging;
 
 namespace AQC_Manager
 {
@@ -61,8 +64,90 @@ namespace AQC_Manager
                 // image file path
                 //textBox1.Text = open.FileName;
                 fileLocation.Text = open.FileName;
-                fileName.Text = employee.Text.Split('(', ')')[1];
+                //fileName.Text = employee.Text.Split('(', ')')[1];
             } 
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            String filelocation = fileLocation.Text;
+            String filename = fileName.Text;
+            String employeeID = employee.Text.Split('(', ')')[1];
+            String Description = fileDescription.Text;
+
+            Image ss = System.Drawing.Image.FromFile(filelocation);
+            //Bitmap bi = null;
+            //if (ss.Height > ss.Width)
+            //{
+            //    bi = ResizeImage(ss, 794, 1122);
+            //}
+            //else if (ss.Width > ss.Height)
+            //{
+            //    bi = ResizeImage(ss, 1122, 794);
+            //}
+            byte[] byteArray = new byte[0];
+            using (MemoryStream stream = new MemoryStream())
+            {
+                ss.Save(stream, System.Drawing.Imaging.ImageFormat.Gif);
+                stream.Close();
+
+                byteArray = stream.ToArray();
+            }
+            //MemoryStream ms = new MemoryStream();
+            //bi.Save(ms, System.Drawing.Imaging.ImageFormat.Gif);
+
+
+            String sqlQ = "insert into documents (employee_id, fileName, Description,file) values (@empID,@fileName,@des,@IMG);";
+            MySqlConnection conn = database.getConnection();
+            MySqlCommand cmd = new MySqlCommand(sqlQ, conn);
+            MySqlDataReader RD;
+
+            try
+            {
+                conn.Open();
+                cmd.Parameters.Add(new MySqlParameter("@empID", employeeID));
+                cmd.Parameters.Add(new MySqlParameter("@fileName", filename));
+                cmd.Parameters.Add(new MySqlParameter("@des",Description));
+                cmd.Parameters.Add(new MySqlParameter("@IMG", byteArray));
+                RD = cmd.ExecuteReader();
+                MessageBox.Show("Saved");
+
+                //while (RD.Read())
+                //{
+
+                //}
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+        }
+        public static Bitmap ResizeImage(Image image, int width, int height)
+        {
+            var destRect = new Rectangle(0, 0, width, height);
+            var destImage = new Bitmap(width, height);
+
+            destImage.SetResolution(image.HorizontalResolution, image.VerticalResolution);
+
+            using (var graphics = Graphics.FromImage(destImage))
+            {
+                graphics.CompositingMode = CompositingMode.SourceCopy;
+                graphics.CompositingQuality = CompositingQuality.HighQuality;
+                graphics.InterpolationMode = InterpolationMode.HighQualityBicubic;
+                graphics.SmoothingMode = SmoothingMode.HighQuality;
+                graphics.PixelOffsetMode = PixelOffsetMode.HighQuality;
+
+                using (var wrapMode = new ImageAttributes())
+                {
+                    wrapMode.SetWrapMode(WrapMode.TileFlipXY);
+                    graphics.DrawImage(image, destRect, 0, 0, image.Width, image.Height, GraphicsUnit.Pixel, wrapMode);
+                }
+            }
+
+            return destImage;
+        }
+
     }
 }

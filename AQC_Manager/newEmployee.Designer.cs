@@ -49,7 +49,6 @@
             this.empDOB = new System.Windows.Forms.DateTimePicker();
             this.empSex = new System.Windows.Forms.ComboBox();
             this.EmpShadi = new System.Windows.Forms.ComboBox();
-            this.browseImage = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -112,8 +111,9 @@
             this.button3 = new System.Windows.Forms.Button();
             this.empId = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
-            this.empPicture = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.browseImage = new System.Windows.Forms.Button();
+            this.empPicture = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -293,23 +293,6 @@
             this.EmpShadi.Name = "EmpShadi";
             this.EmpShadi.Size = new System.Drawing.Size(105, 21);
             this.EmpShadi.TabIndex = 6;
-            // 
-            // browseImage
-            // 
-            this.browseImage.BackColor = System.Drawing.Color.Transparent;
-            this.browseImage.BackgroundImage = global::AQC_Manager.Properties.Resources.Add_User_Male;
-            this.browseImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.browseImage.FlatAppearance.BorderSize = 0;
-            this.browseImage.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.browseImage.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.browseImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.browseImage.Location = new System.Drawing.Point(447, 151);
-            this.browseImage.Name = "browseImage";
-            this.browseImage.Size = new System.Drawing.Size(46, 42);
-            this.browseImage.TabIndex = 12;
-            this.toolTip1.SetToolTip(this.browseImage, "Add Picture");
-            this.browseImage.UseVisualStyleBackColor = false;
-            this.browseImage.Click += new System.EventHandler(this.browseImage_Click);
             // 
             // groupBox1
             // 
@@ -896,6 +879,7 @@
             this.empId.TabIndex = 1;
             this.empId.Text = "AQE-";
             this.empId.WordWrap = false;
+            this.empId.TextChanged += new System.EventHandler(this.empId_TextChanged);
             // 
             // label36
             // 
@@ -905,6 +889,23 @@
             this.label36.Size = new System.Drawing.Size(67, 13);
             this.label36.TabIndex = 10;
             this.label36.Text = "Employee ID";
+            // 
+            // browseImage
+            // 
+            this.browseImage.BackColor = System.Drawing.Color.Transparent;
+            this.browseImage.BackgroundImage = global::AQC_Manager.Properties.Resources.Add_User_Male;
+            this.browseImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.browseImage.FlatAppearance.BorderSize = 0;
+            this.browseImage.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.browseImage.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.browseImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.browseImage.Location = new System.Drawing.Point(447, 151);
+            this.browseImage.Name = "browseImage";
+            this.browseImage.Size = new System.Drawing.Size(46, 42);
+            this.browseImage.TabIndex = 12;
+            this.toolTip1.SetToolTip(this.browseImage, "Add Picture");
+            this.browseImage.UseVisualStyleBackColor = false;
+            this.browseImage.Click += new System.EventHandler(this.browseImage_Click);
             // 
             // empPicture
             // 

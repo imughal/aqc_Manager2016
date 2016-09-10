@@ -37,6 +37,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.fileLocation = new System.Windows.Forms.TextBox();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // employee
@@ -116,11 +118,32 @@
             this.fileLocation.Size = new System.Drawing.Size(352, 20);
             this.fileLocation.TabIndex = 3;
             // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(352, 255);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.TabIndex = 5;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(432, 255);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 5;
+            this.button3.Text = "Cancel";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // addFiles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(520, 262);
+            this.ClientSize = new System.Drawing.Size(520, 287);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.fileDescription);
             this.Controls.Add(this.fileLocation);
             this.Controls.Add(this.fileName);
@@ -131,8 +154,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.employee);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(536, 300);
-            this.MinimumSize = new System.Drawing.Size(536, 300);
+            this.MaximumSize = new System.Drawing.Size(536, 325);
+            this.MinimumSize = new System.Drawing.Size(536, 325);
             this.Name = "addFiles";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add New File";
@@ -153,5 +176,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox fileLocation;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button button3;
     }
 }

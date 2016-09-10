@@ -320,6 +320,11 @@ namespace AQC_Manager
         {
 
         }
+
+        private void empId_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
