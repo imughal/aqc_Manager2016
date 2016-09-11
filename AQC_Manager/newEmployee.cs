@@ -199,7 +199,7 @@ namespace AQC_Manager
                 
                 empPicture.Image = new Bitmap(open.FileName);
                 empPicture.SizeMode = PictureBoxSizeMode.StretchImage;
-                MessageBox.Show(open.FileName);
+               // MessageBox.Show(open.FileName);
                 fileName = open.FileName.ToString();
 
                 // image file path

@@ -64,6 +64,8 @@ namespace AQC_Manager
                 // image file path
                 //textBox1.Text = open.FileName;
                 fileLocation.Text = open.FileName;
+                pictureBox1.Image = new Bitmap(open.FileName);
+                pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
                 //fileName.Text = employee.Text.Split('(', ')')[1];
             } 
         }
@@ -76,27 +78,23 @@ namespace AQC_Manager
             String Description = fileDescription.Text;
 
             Image ss = System.Drawing.Image.FromFile(filelocation);
-            //Bitmap bi = null;
-            //if (ss.Height > ss.Width)
-            //{
-            //    bi = ResizeImage(ss, 794, 1122);
-            //}
-            //else if (ss.Width > ss.Height)
-            //{
-            //    bi = ResizeImage(ss, 1122, 794);
-            //}
-            byte[] byteArray = new byte[0];
-            using (MemoryStream stream = new MemoryStream())
+            Bitmap bi = null;
+            if (ss.Height > ss.Width)
             {
-                ss.Save(stream, System.Drawing.Imaging.ImageFormat.Gif);
-                stream.Close();
-
-                byteArray = stream.ToArray();
+                bi = ResizeImage(ss, 1588, 2244);
             }
-            //MemoryStream ms = new MemoryStream();
-            //bi.Save(ms, System.Drawing.Imaging.ImageFormat.Gif);
+            else if (ss.Width > ss.Height)
+            {
+                bi = ResizeImage(ss, 2244, 1588);
+            }
 
+            MemoryStream ms = new MemoryStream();
+            bi.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+            //pictureBox1.Image = bi;
+            //pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
 
+            byte[] byteArray = ms.ToArray();
+            
             String sqlQ = "insert into documents (employee_id, fileName, Description,file) values (@empID,@fileName,@des,@IMG);";
             MySqlConnection conn = database.getConnection();
             MySqlCommand cmd = new MySqlCommand(sqlQ, conn);
@@ -108,7 +106,8 @@ namespace AQC_Manager
                 cmd.Parameters.Add(new MySqlParameter("@empID", employeeID));
                 cmd.Parameters.Add(new MySqlParameter("@fileName", filename));
                 cmd.Parameters.Add(new MySqlParameter("@des",Description));
-                cmd.Parameters.Add(new MySqlParameter("@IMG", byteArray));
+                cmd.Parameters.Add("@IMG",MySqlDbType.Blob).Value = byteArray;
+                //cmd.Parameters.Add("@image", MySqlDbType.Blob).Value = data;
                 RD = cmd.ExecuteReader();
                 MessageBox.Show("Saved");
 
@@ -147,6 +146,11 @@ namespace AQC_Manager
             }
 
             return destImage;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
 
     }

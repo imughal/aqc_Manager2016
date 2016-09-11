@@ -1,7 +1,6 @@
 C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\bin\Release\AQC_Manager.exe
 C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\bin\Release\AQC_Manager.pdb
 C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\bin\Release\MySql.Data.dll
-C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\obj\x86\Release\AQC_Manager.Form1.resources
 C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\obj\x86\Release\AQC_Manager.employeesList.resources
 C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\obj\x86\Release\AQC_Manager.newEmployee.resources
 C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\obj\x86\Release\AQC_Manager.Properties.Resources.resources
@@ -10,3 +9,18 @@ C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\
 C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\obj\x86\Release\AQC_Manager.exe
 C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\obj\x86\Release\AQC_Manager.pdb
 C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\bin\Release\AQC_Manager.exe.config
+C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\bin\Release\AQC_Manager.exe.manifest
+C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\bin\Release\AQC_Manager.application
+C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\bin\Release\Interop.AcroPDFLib.dll
+C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\bin\Release\AxInterop.AcroPDFLib.dll
+C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\obj\x86\Release\AQC_Manager.csprojResolveAssemblyReference.cache
+C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\obj\x86\Release\Interop.AcroPDFLib.dll
+C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\obj\x86\Release\AxInterop.AcroPDFLib.dll
+C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\obj\x86\Release\AQC_Manager.csproj.ResolveComReference.cache
+C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\obj\x86\Release\AQC_Manager.addFiles.resources
+C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\obj\x86\Release\AQC_Manager.modifyEmployee.resources
+C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\obj\x86\Release\AQC_Manager.filesViewer.resources
+C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\obj\x86\Release\AQC_Manager.mainWindow.resources
+C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\obj\x86\Release\AQC_Manager.TrustInfo.xml
+C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\obj\x86\Release\AQC_Manager.exe.manifest
+C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\obj\x86\Release\AQC_Manager.application
