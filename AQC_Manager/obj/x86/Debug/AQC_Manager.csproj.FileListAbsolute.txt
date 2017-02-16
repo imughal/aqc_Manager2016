@@ -24,3 +24,23 @@ C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\
 C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\obj\x86\Debug\AQC_Manager.modifyEmployee.resources
 C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\obj\x86\Debug\AQC_Manager.mainWindow.resources
 C:\Users\Accounts\documents\visual studio 2010\Projects\AQC_Manager\AQC_Manager\obj\x86\Debug\AQC_Manager.addFiles.resources
+C:\Users\Finance\Desktop\AQC_Manager-1\AQC_Manager\bin\Debug\AQC_Manager.exe.config
+C:\Users\Finance\Desktop\AQC_Manager-1\AQC_Manager\obj\x86\Debug\AQC_Manager.exe
+C:\Users\Finance\Desktop\AQC_Manager-1\AQC_Manager\obj\x86\Debug\AQC_Manager.pdb
+C:\Users\Finance\Desktop\AQC_Manager-1\AQC_Manager\bin\Debug\AQC_Manager.exe.manifest
+C:\Users\Finance\Desktop\AQC_Manager-1\AQC_Manager\bin\Debug\AQC_Manager.application
+C:\Users\Finance\Desktop\AQC_Manager-1\AQC_Manager\bin\Debug\AQC_Manager.exe
+C:\Users\Finance\Desktop\AQC_Manager-1\AQC_Manager\bin\Debug\AQC_Manager.pdb
+C:\Users\Finance\Desktop\AQC_Manager-1\AQC_Manager\obj\x86\Debug\AQC_Manager.csprojResolveAssemblyReference.cache
+C:\Users\Finance\Desktop\AQC_Manager-1\AQC_Manager\obj\x86\Debug\AQC_Manager.addFiles.resources
+C:\Users\Finance\Desktop\AQC_Manager-1\AQC_Manager\obj\x86\Debug\AQC_Manager.modifyEmployee.resources
+C:\Users\Finance\Desktop\AQC_Manager-1\AQC_Manager\obj\x86\Debug\AQC_Manager.filesViewer.resources
+C:\Users\Finance\Desktop\AQC_Manager-1\AQC_Manager\obj\x86\Debug\AQC_Manager.mainWindow.resources
+C:\Users\Finance\Desktop\AQC_Manager-1\AQC_Manager\obj\x86\Debug\AQC_Manager.employeesList.resources
+C:\Users\Finance\Desktop\AQC_Manager-1\AQC_Manager\obj\x86\Debug\AQC_Manager.newEmployee.resources
+C:\Users\Finance\Desktop\AQC_Manager-1\AQC_Manager\obj\x86\Debug\AQC_Manager.Properties.Resources.resources
+C:\Users\Finance\Desktop\AQC_Manager-1\AQC_Manager\obj\x86\Debug\AQC_Manager.viewEmployee.resources
+C:\Users\Finance\Desktop\AQC_Manager-1\AQC_Manager\obj\x86\Debug\AQC_Manager.csproj.GenerateResource.Cache
+C:\Users\Finance\Desktop\AQC_Manager-1\AQC_Manager\obj\x86\Debug\AQC_Manager.TrustInfo.xml
+C:\Users\Finance\Desktop\AQC_Manager-1\AQC_Manager\obj\x86\Debug\AQC_Manager.exe.manifest
+C:\Users\Finance\Desktop\AQC_Manager-1\AQC_Manager\obj\x86\Debug\AQC_Manager.application

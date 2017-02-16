@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.IO;
+using System.Drawing.Imaging;
 
 namespace AQC_Manager
 {
@@ -62,6 +63,7 @@ namespace AQC_Manager
                     }
                 }
             }
+            
         }
 
         private void listFiles_SelectedIndexChanged(object sender, EventArgs e)
@@ -122,6 +124,52 @@ namespace AQC_Manager
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedItem != null)
+            {
+                SaveFileDialog save = new SaveFileDialog();
+                save.Title = "Save Image As";
+                // image filters
+                save.Filter = "Image Files(*.jpg; *.jpeg)|*.jpg; *.jpeg;";
+                string saveFileName = listFiles.SelectedItems[0].Text;
+                save.FileName = saveFileName + ".jpg";
+                if (save.ShowDialog() == DialogResult.OK)
+                {
+                    string pathFile = save.FileName;
+                    try
+                    {
+                        fileViewBox.Image.Save(@pathFile, ImageFormat.Jpeg);
+                        MessageBox.Show("File Saved");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.ToString());
+                    }
+                }
+            }
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

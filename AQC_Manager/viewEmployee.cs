@@ -197,5 +197,13 @@ namespace AQC_Manager
             ve.MdiParent = this.MdiParent;
             this.Close();
         }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            newEmployee nx = new newEmployee();
+            nx.Show();
+            nx.MdiParent = this.MdiParent;
+            this.Close();
+        }
     }
 }
