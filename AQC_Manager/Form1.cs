@@ -72,6 +72,26 @@ namespace AQC_Manager
 
         }
 
+        private void toolStripLabel1_Click(object sender, EventArgs e)
+        {
+
+            string file = "D:\\backup.sql";
+
+            using (MySqlConnection conn = database.getConnection())
+            {
+                using (MySqlCommand cmd = new MySqlCommand())
+                {
+                    using (MySqlBackup mb = new MySqlBackup(cmd))
+                    {
+                        cmd.Connection = conn;
+                        conn.Open();
+                        mb.ExportToFile(file);
+                        conn.Close();
+                    }
+                }
+            }
+        }
+
 
 
 

@@ -136,7 +136,7 @@ namespace AQC_Manager
 
         private void loadPic()
         {
-            empPicture.Image = AQC_Manager.Properties.Resources._1432580807_free_17;
+            empPicture.Image = AQC_Manager.Properties.Resources.Profile;
             String sqlQ = "select * FROM employee_pic WHERE employee_id = @empID";
             //String sqlQ = "select * FROM employee_pic";
             MySqlConnection conn = database.getConnection();
@@ -154,7 +154,7 @@ namespace AQC_Manager
                 while (RD.Read())
                 {
                     byte[] imgg = (byte[])(RD["pic"]);
-                    if (imgg == null) {empPicture.Image = AQC_Manager.Properties.Resources._1432580807_free_17; }
+                    if (imgg == null) {empPicture.Image = AQC_Manager.Properties.Resources.Profile; }
                     else
                     {
                         MemoryStream MS = new MemoryStream(imgg);

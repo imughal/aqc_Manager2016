@@ -44,3 +44,7 @@ C:\Users\Finance\Desktop\AQC_Manager-1\AQC_Manager\obj\x86\Debug\AQC_Manager.csp
 C:\Users\Finance\Desktop\AQC_Manager-1\AQC_Manager\obj\x86\Debug\AQC_Manager.TrustInfo.xml
 C:\Users\Finance\Desktop\AQC_Manager-1\AQC_Manager\obj\x86\Debug\AQC_Manager.exe.manifest
 C:\Users\Finance\Desktop\AQC_Manager-1\AQC_Manager\obj\x86\Debug\AQC_Manager.application
+C:\Users\Finance\Desktop\AQC_Manager-1\AQC_Manager\obj\x86\Debug\AQC_Manager.PhoneDirectory.resources
+C:\Users\Finance\Desktop\AQC_Manager-1\AQC_Manager\bin\Debug\MySql.Data.dll
+C:\Users\Finance\Desktop\AQC_Manager-1\AQC_Manager\bin\Debug\MySql.Data.xml
+C:\Users\Finance\Desktop\AQC_Manager-1\AQC_Manager\bin\Debug\MySqlBackup.dll

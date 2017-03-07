@@ -234,7 +234,7 @@
             // toolStripButton1
             // 
             this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = global::AQC_Manager.Properties.Resources.Edit_User_Male;
+            this.toolStripButton1.Image = global::AQC_Manager.Properties.Resources.editUserMale;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(30, 30);
@@ -244,7 +244,7 @@
             // toolStripButton2
             // 
             this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = global::AQC_Manager.Properties.Resources.Add_User_Male;
+            this.toolStripButton2.Image = global::AQC_Manager.Properties.Resources.AddUserMale;
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(30, 30);
@@ -813,7 +813,7 @@
             // empPicture
             // 
             this.empPicture.BackColor = System.Drawing.Color.Transparent;
-            this.empPicture.Image = global::AQC_Manager.Properties.Resources._1432580807_free_17;
+            this.empPicture.Image = global::AQC_Manager.Properties.Resources.Profile;
             this.empPicture.Location = new System.Drawing.Point(437, 24);
             this.empPicture.Name = "empPicture";
             this.empPicture.Size = new System.Drawing.Size(150, 175);

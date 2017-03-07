@@ -72,6 +72,10 @@ namespace AQC_Manager
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            if (employee.Text == null || employee.Text == "")
+            {
+                return;
+            }
             String filelocation = fileLocation.Text;
             String filename = fileName.Text;
             String employeeID = employee.Text.Split('(', ')')[1];

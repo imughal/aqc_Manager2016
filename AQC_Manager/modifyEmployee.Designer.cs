@@ -904,7 +904,7 @@
             // browseImage
             // 
             this.browseImage.BackColor = System.Drawing.Color.Transparent;
-            this.browseImage.BackgroundImage = global::AQC_Manager.Properties.Resources.Change_User_Male;
+            this.browseImage.BackgroundImage = global::AQC_Manager.Properties.Resources.ChangeUserMale;
             this.browseImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.browseImage.FlatAppearance.BorderSize = 0;
             this.browseImage.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;

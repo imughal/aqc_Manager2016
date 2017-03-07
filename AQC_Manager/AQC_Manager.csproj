@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>AQC_Manager</RootNamespace>
     <AssemblyName>AQC_Manager</AssemblyName>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -40,6 +40,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -49,6 +50,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>E81CEA4F41988F0ECAA6D60E41ACA1973C028A86</ManifestCertificateThumbprint>
@@ -77,6 +79,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\..\Program Files\MySQL\MySQL Connector Net 6.9.8\Assemblies\v4.0\MySql.Data.dll</HintPath>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="MySqlBackup">
+      <HintPath>..\..\MySqlBackup.NET 2.0.9.5\Net45\MySqlBackup.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -129,6 +134,12 @@
     <Compile Include="newEmployee.Designer.cs">
       <DependentUpon>newEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="PhoneDirectory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhoneDirectory.Designer.cs">
+      <DependentUpon>PhoneDirectory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="viewEmployee.cs">
@@ -154,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="newEmployee.resx">
       <DependentUpon>newEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhoneDirectory.resx">
+      <DependentUpon>PhoneDirectory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

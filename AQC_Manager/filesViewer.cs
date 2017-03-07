@@ -104,7 +104,7 @@ namespace AQC_Manager
                 while (RD.Read())
                 {
                     byte[] imgg = (byte[])(RD["file"]);
-                    if (imgg == null) { fileViewBox.Image = AQC_Manager.Properties.Resources._1432580807_free_17; }
+                    if (imgg == null) { fileViewBox.Image = AQC_Manager.Properties.Resources.Profile; }
                     else
                     {
                         MemoryStream MS = new MemoryStream(imgg);

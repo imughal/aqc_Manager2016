@@ -63,9 +63,9 @@ namespace AQC_Manager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _1432580807_free_17 {
+        internal static System.Drawing.Bitmap AddUserMale {
             get {
-                object obj = ResourceManager.GetObject("1432580807_free-17", resourceCulture);
+                object obj = ResourceManager.GetObject("AddUserMale", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace AQC_Manager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Add_User_Male {
+        internal static System.Drawing.Bitmap ChangeUserMale {
             get {
-                object obj = ResourceManager.GetObject("Add User Male", resourceCulture);
+                object obj = ResourceManager.GetObject("ChangeUserMale", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace AQC_Manager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Change_User_Male {
+        internal static System.Drawing.Bitmap editUserMale {
             get {
-                object obj = ResourceManager.GetObject("Change User Male", resourceCulture);
+                object obj = ResourceManager.GetObject("editUserMale", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace AQC_Manager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Edit_User_Male {
+        internal static System.Drawing.Bitmap Profile {
             get {
-                object obj = ResourceManager.GetObject("Edit User Male", resourceCulture);
+                object obj = ResourceManager.GetObject("Profile", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
