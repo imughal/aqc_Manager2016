@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AQC_Manager.exe" size="143360">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AQC_Manager.exe" size="5181952">
       <assemblyIdentity name="AQC_Manager" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>3IeCw8KXNqpMNU/hemBE2BJe4ZEGdPjhdgWt2/J12yg=</dsig:DigestValue>
+        <dsig:DigestValue>IyjtVVrghdq7DWhc1ilk5MXSaoKHgb80+XVST+NKyGU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -77,13 +77,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="AQC_Manager.exe.config" size="144">
+  <file name="AQC_Manager.exe.config" size="433">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>jLCHdLm7v47ACsSCc72IOp8bA051ZvlIJCmYB91hk5o=</dsig:DigestValue>
+      <dsig:DigestValue>wImq31iOGCttPuAyyPZmpAqok6zl4qVpg91Lb71bbfA=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

@@ -15,9 +15,11 @@ namespace AQC_Manager
         public employeesList()
         {
             InitializeComponent();
-        }
+            loadEmployees();
+            comboLoad();
 
-        private void Form2_Load(object sender, EventArgs e)
+        }
+        private void loadEmployees()
         {
             MySqlConnection con = database.getConnection();
 
@@ -50,6 +52,7 @@ namespace AQC_Manager
             MySqlDataAdapter myDA = new MySqlDataAdapter(sql, con);
             myDA.Fill(DS);
             employeesShow.DataSource = DS.Tables[0];
+            employeesShow.Columns["Date of Birth"].DefaultCellStyle.Format = "dd-MMM-yyyy";
 
 
             try
@@ -61,51 +64,77 @@ namespace AQC_Manager
             {
                 MessageBox.Show(ex.Message);
             }
-            //int rowNumber = 1;
-            //foreach (DataGridViewRow row in employeesShow.Rows)
-            //{
-            //    if (row.IsNewRow) continue;
-            //    row.HeaderCell.Value = "Row " + rowNumber;
-            //    rowNumber = rowNumber + 1;
-            //}
-            //employeesShow.AutoResizeRowHeadersWidth(
-            //    DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders);
+        }
+        private void comboLoad()
+        {
+            foreach (DataGridViewColumn col in employeesShow.Columns)
+            {
+                headerCombo.Items.Add(col.HeaderText);
+            }
+            headerCombo.SelectedIndex = 0;
+            
+        }
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string searchValue = textBox1.Text;
+            //string searchValue = textBox1.Text;
 
-            employeesShow.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            try
-            {
-                foreach (DataGridViewRow row in employeesShow.Rows)
-                {
-                    if (row.Cells[2].Value.ToString().Equals(searchValue))
-                    {
-                        row.Selected = true;
-                        break;
-                    }
-                }
-            }
-            catch (Exception exc)
-            {
-                MessageBox.Show(exc.Message);
-            }
+            //employeesShow.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            //try
+            //{
+            //    foreach (DataGridViewRow row in employeesShow.Rows)
+            //    {
+            //        if (row.Cells["Name"].Value.ToString().Equals(searchValue))
+            //        {
+            //            row.Selected = true;
+            //            break;
+            //        }
+            //    }
+            //}
+            //catch (Exception exc)
+            //{
+            //    MessageBox.Show(exc.Message);
+            //}
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            MySqlConnection con = database.getConnection();
+            //MySqlConnection con = database.getConnection();
 
-            con.Open();
-            String sql = "SELECT employee_id AS 'Employee ID', name AS 'Name',fathername AS 'Father Name', sex AS 'Gender', dateOfBirth as 'Date of Birth', nationality as 'Nationality', religion as 'Religion' FROM aqc_manager.employees where LOWER(name) like '%" + textBox1.Text.ToLower() + "%'";
-            DataSet DS = new DataSet();
-            MySqlDataAdapter myDA = new MySqlDataAdapter(sql, con);
-            myDA.Fill(DS);
-            employeesShow.DataSource = DS.Tables[0];
+            //con.Open();
+            //String sql = "SELECT employee_id AS 'Employee ID', name AS 'Name',fathername AS 'Father Name', sex AS 'Gender', dateOfBirth as 'Date of Birth', nationality as 'Nationality', religion as 'Religion' FROM aqc_manager.employees where LOWER(name) like '%" + textBox1.Text.ToLower() + "%'";
+            //DataSet DS = new DataSet();
+            //MySqlDataAdapter myDA = new MySqlDataAdapter(sql, con);
+            //myDA.Fill(DS);
+            
+            //employeesShow.DataSource = DS.Tables[0];
+            
 
-            con.Close();
+            //con.Close();
+
+            searchOPT();
+        }
+
+        private void searchOPT()
+        {
+            (employeesShow.DataSource as DataTable).DefaultView.RowFilter = string.Format("[{0}] LIKE '%{1}%'", headerCombo.Text, textBox1.Text);
+            //MySqlConnection con = database.getConnection();
+
+            //con.Open();
+            //String sql = "SELECT employee_id AS 'Employee ID', name AS 'Name',fathername AS 'Father Name', sex AS 'Gender', dateOfBirth as 'Date of Birth', nationality as 'Nationality', religion as 'Religion' FROM aqc_manager.employees where LOWER(name) like '%" + textBox1.Text.ToLower() + "%'";
+            //DataSet DS = new DataSet();
+            //MySqlDataAdapter myDA = new MySqlDataAdapter(sql, con);
+            //myDA.Fill(DS);
+
+            //employeesShow.DataSource = DS.Tables[0];
+
+
+            //con.Close();
         }
 
         private void employeesShow_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
@@ -118,14 +147,19 @@ namespace AQC_Manager
 
         private void employeesShow_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Right)
+            try
             {
-                // Add this
-                employeesShow.CurrentCell = employeesShow.Rows[e.RowIndex].Cells[e.ColumnIndex];
-                // Can leave these here - doesn't hurt
-                employeesShow.Rows[e.RowIndex].Selected = true;
-                employeesShow.Focus();
+                if (e.Button == MouseButtons.Right)
+                {
+                    // Add this
+                    employeesShow.CurrentCell = employeesShow.Rows[e.RowIndex].Cells[e.ColumnIndex];
+                    // Can leave these here - doesn't hurt
+                    employeesShow.Rows[e.RowIndex].Selected = true;
+                    employeesShow.Focus();
+                }
             }
+            catch (Exception el)
+            { }
         }
 
         private void viewEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -179,6 +213,22 @@ namespace AQC_Manager
 
                 ve.MdiParent = this.MdiParent;
             }
+        }
+
+        private void viewDocumentsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int selectedrowindex = employeesShow.SelectedCells[0].RowIndex;
+
+            DataGridViewRow selectedRow = employeesShow.Rows[selectedrowindex];
+
+            string a = Convert.ToString(selectedRow.Cells["Employee ID"].Value);
+            string b = Convert.ToString(selectedRow.Cells["Name"].Value);
+            string empo = b + "(" + a + ")";
+            //MessageBox.Show(a);
+            filesViewer DCViewer = new filesViewer(empo);
+            DCViewer.Show();
+
+            DCViewer.MdiParent = this.MdiParent;
         }
     }
 }

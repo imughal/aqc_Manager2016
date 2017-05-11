@@ -325,6 +325,11 @@ namespace AQC_Manager
         {
 
         }
+
+        private void newEmployee_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

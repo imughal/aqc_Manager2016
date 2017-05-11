@@ -50,6 +50,8 @@
             this.empSex = new System.Windows.Forms.ComboBox();
             this.EmpShadi = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.browseImage = new System.Windows.Forms.Button();
+            this.empPicture = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
             this.passportNumber = new System.Windows.Forms.TextBox();
@@ -112,16 +114,14 @@
             this.empId = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.browseImage = new System.Windows.Forms.Button();
-            this.empPicture = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.empPicture)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.empPicture)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -324,6 +324,33 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Personal Information";
+            // 
+            // browseImage
+            // 
+            this.browseImage.BackColor = System.Drawing.Color.Transparent;
+            this.browseImage.BackgroundImage = global::AQC_Manager.Properties.Resources.AddUserMale;
+            this.browseImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.browseImage.FlatAppearance.BorderSize = 0;
+            this.browseImage.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.browseImage.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.browseImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.browseImage.Location = new System.Drawing.Point(447, 151);
+            this.browseImage.Name = "browseImage";
+            this.browseImage.Size = new System.Drawing.Size(46, 42);
+            this.browseImage.TabIndex = 12;
+            this.toolTip1.SetToolTip(this.browseImage, "Add Picture");
+            this.browseImage.UseVisualStyleBackColor = false;
+            this.browseImage.Click += new System.EventHandler(this.browseImage_Click);
+            // 
+            // empPicture
+            // 
+            this.empPicture.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.empPicture.Location = new System.Drawing.Point(437, 24);
+            this.empPicture.Name = "empPicture";
+            this.empPicture.Size = new System.Drawing.Size(150, 175);
+            this.empPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.empPicture.TabIndex = 4;
+            this.empPicture.TabStop = false;
             // 
             // groupBox2
             // 
@@ -890,33 +917,6 @@
             this.label36.TabIndex = 10;
             this.label36.Text = "Employee ID";
             // 
-            // browseImage
-            // 
-            this.browseImage.BackColor = System.Drawing.Color.Transparent;
-            this.browseImage.BackgroundImage = global::AQC_Manager.Properties.Resources.AddUserMale;
-            this.browseImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.browseImage.FlatAppearance.BorderSize = 0;
-            this.browseImage.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.browseImage.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.browseImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.browseImage.Location = new System.Drawing.Point(447, 151);
-            this.browseImage.Name = "browseImage";
-            this.browseImage.Size = new System.Drawing.Size(46, 42);
-            this.browseImage.TabIndex = 12;
-            this.toolTip1.SetToolTip(this.browseImage, "Add Picture");
-            this.browseImage.UseVisualStyleBackColor = false;
-            this.browseImage.Click += new System.EventHandler(this.browseImage_Click);
-            // 
-            // empPicture
-            // 
-            this.empPicture.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.empPicture.Location = new System.Drawing.Point(437, 24);
-            this.empPicture.Name = "empPicture";
-            this.empPicture.Size = new System.Drawing.Size(150, 175);
-            this.empPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.empPicture.TabIndex = 4;
-            this.empPicture.TabStop = false;
-            // 
             // newEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -940,8 +940,10 @@
             this.Name = "newEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "New Employee";
+            this.Load += new System.EventHandler(this.newEmployee_Load_1);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.empPicture)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -954,7 +956,6 @@
             this.groupBox6.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.empPicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

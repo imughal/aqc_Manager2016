@@ -17,11 +17,20 @@ namespace AQC_Manager
         public addFiles()
         {
             InitializeComponent();
+            loadEmployees();
+        }
+
+        public addFiles(string EMP)
+        {
+            InitializeComponent();
+            loadEmployees();
+            employee.SelectedItem = EMP;
+
         }
 
         private void addFiles_Load(object sender, EventArgs e)
         {
-            loadEmployees();
+            //loadEmployees();
         }
         private void loadEmployees()
         {
@@ -50,23 +59,12 @@ namespace AQC_Manager
         {
             OpenFileDialog open = new OpenFileDialog();
             open.Title = "Select File";
-            // image filters
             open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
             if (open.ShowDialog() == DialogResult.OK)
             {
-                // display image in picture box
-
-                //empPicture.Image = new Bitmap(open.FileName);
-                //empPicture.SizeMode = PictureBoxSizeMode.StretchImage;
-                //MessageBox.Show(open.FileName);
-                //fileName = open.FileName.ToString();
-                //imageModify = true;
-                // image file path
-                //textBox1.Text = open.FileName;
                 fileLocation.Text = open.FileName;
                 pictureBox1.Image = new Bitmap(open.FileName);
                 pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-                //fileName.Text = employee.Text.Split('(', ')')[1];
             } 
         }
 
@@ -94,9 +92,6 @@ namespace AQC_Manager
 
             MemoryStream ms = new MemoryStream();
             bi.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-            //pictureBox1.Image = bi;
-            //pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-
             byte[] byteArray = ms.ToArray();
             
             String sqlQ = "insert into documents (employee_id, fileName, Description,file) values (@empID,@fileName,@des,@IMG);";
@@ -111,14 +106,9 @@ namespace AQC_Manager
                 cmd.Parameters.Add(new MySqlParameter("@fileName", filename));
                 cmd.Parameters.Add(new MySqlParameter("@des",Description));
                 cmd.Parameters.Add("@IMG",MySqlDbType.Blob).Value = byteArray;
-                //cmd.Parameters.Add("@image", MySqlDbType.Blob).Value = data;
                 RD = cmd.ExecuteReader();
                 MessageBox.Show("Saved");
-
-                //while (RD.Read())
-                //{
-
-                //}
+                clearFieldsAfterSave();
                 conn.Close();
             }
             catch (Exception ex)
@@ -126,7 +116,19 @@ namespace AQC_Manager
                 MessageBox.Show(ex.ToString());
             }
 
+            
         }
+
+        private void clearFieldsAfterSave()
+        {
+            fileDescription.Text = "";
+            fileName.Text = "";
+            fileLocation.Text = "";
+            pictureBox1.InitialImage = null;
+            pictureBox1.Image = null;
+        }
+
+
         public static Bitmap ResizeImage(Image image, int width, int height)
         {
             var destRect = new Rectangle(0, 0, width, height);

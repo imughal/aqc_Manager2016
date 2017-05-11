@@ -37,7 +37,8 @@
             this.viewEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.viewDocumentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.headerCombo = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.employeesShow)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -94,21 +95,22 @@
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.viewEmployeeToolStripMenuItem,
-            this.editEmployeeToolStripMenuItem});
+            this.editEmployeeToolStripMenuItem,
+            this.viewDocumentsToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(155, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(164, 70);
             // 
             // viewEmployeeToolStripMenuItem
             // 
             this.viewEmployeeToolStripMenuItem.Name = "viewEmployeeToolStripMenuItem";
-            this.viewEmployeeToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.viewEmployeeToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.viewEmployeeToolStripMenuItem.Text = "&View Employee";
             this.viewEmployeeToolStripMenuItem.Click += new System.EventHandler(this.viewEmployeeToolStripMenuItem_Click);
             // 
             // editEmployeeToolStripMenuItem
             // 
             this.editEmployeeToolStripMenuItem.Name = "editEmployeeToolStripMenuItem";
-            this.editEmployeeToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.editEmployeeToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.editEmployeeToolStripMenuItem.Text = "&Edit Employee";
             this.editEmployeeToolStripMenuItem.Click += new System.EventHandler(this.editEmployeeToolStripMenuItem_Click);
             // 
@@ -116,29 +118,33 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(12, 12);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.Size = new System.Drawing.Size(158, 20);
             this.textBox1.TabIndex = 2;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // button1
+            // viewDocumentsToolStripMenuItem
             // 
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(118, 10);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 22);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "button1";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.viewDocumentsToolStripMenuItem.Name = "viewDocumentsToolStripMenuItem";
+            this.viewDocumentsToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.viewDocumentsToolStripMenuItem.Text = "View Documents";
+            this.viewDocumentsToolStripMenuItem.Click += new System.EventHandler(this.viewDocumentsToolStripMenuItem_Click);
+            // 
+            // headerCombo
+            // 
+            this.headerCombo.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.headerCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.headerCombo.FormattingEnabled = true;
+            this.headerCombo.Location = new System.Drawing.Point(119, 12);
+            this.headerCombo.Name = "headerCombo";
+            this.headerCombo.Size = new System.Drawing.Size(121, 21);
+            this.headerCombo.TabIndex = 4;
             // 
             // employeesList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(750, 537);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.headerCombo);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.employeesShow);
             this.MaximizeBox = false;
@@ -160,9 +166,10 @@
 
         private System.Windows.Forms.DataGridView employeesShow;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem viewEmployeeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editEmployeeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewDocumentsToolStripMenuItem;
+        private System.Windows.Forms.ComboBox headerCombo;
     }
 }

@@ -22,5 +22,15 @@ namespace AQC_Manager.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=192.168.1.33;user id=root;database=aqc_manager")]
+        public string aqc_managerConnectionString {
+            get {
+                return ((string)(this["aqc_managerConnectionString"]));
+            }
+        }
     }
 }

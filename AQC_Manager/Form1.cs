@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-//using System.Linq;
+using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
@@ -26,8 +26,6 @@ namespace AQC_Manager
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             employeesList nx = new employeesList();
-            
-
             nx.Show();
             nx.MdiParent = this;
         }
@@ -35,8 +33,6 @@ namespace AQC_Manager
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
             viewEmployee nx = new viewEmployee();
-
-
             nx.Show();
             nx.MdiParent = this;
         }
@@ -44,8 +40,6 @@ namespace AQC_Manager
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
             newEmployee nx = new newEmployee();
-
-
             nx.Show();
             nx.MdiParent = this;
         }
@@ -58,8 +52,6 @@ namespace AQC_Manager
         private void toolStripButton5_Click(object sender, EventArgs e)
         {
             filesViewer nx = new filesViewer();
-
-           
             nx.Show();
             nx.MdiParent = this;
         }
@@ -69,14 +61,11 @@ namespace AQC_Manager
             addFiles aF = new addFiles();
             aF.Show();
             aF.MdiParent = this;
-
         }
 
         private void toolStripLabel1_Click(object sender, EventArgs e)
         {
-
             string file = "D:\\backup.sql";
-
             using (MySqlConnection conn = database.getConnection())
             {
                 using (MySqlCommand cmd = new MySqlCommand())

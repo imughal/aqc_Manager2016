@@ -11,7 +11,7 @@ namespace AQC_Manager
     {
 
 
-        public static String Server = "192.168.1.32";
+        public static String Server = "192.168.1.33";
         public static String Database = "aqc_manager";
         public static String UserID = "root";
         public static String password = "";

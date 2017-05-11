@@ -103,8 +103,8 @@ namespace AQC_Manager
             //Labor Card information
             personCode.DataBindings.Add("Text", biS, "personCode");
             laborCardNumber.DataBindings.Add("Text", biS, "laborCardNumber");
-            laborExpiryDate.DataBindings.Add("Text", biS, "laborIssue", true, DataSourceUpdateMode.OnValidation, "", "dd-MMM-yyyy");
-            laborIssueDate.DataBindings.Add("Text", biS, "laborExpiry", true, DataSourceUpdateMode.OnValidation, "", "dd-MMM-yyyy");
+            laborExpiryDate.DataBindings.Add("Text", biS, "laborExpiry", true, DataSourceUpdateMode.OnValidation, "", "dd-MMM-yyyy");
+            laborIssueDate.DataBindings.Add("Text", biS, "laborIssue", true, DataSourceUpdateMode.OnValidation, "", "dd-MMM-yyyy");
 
             //WPS Information
             wpsBank.DataBindings.Add("Text", biS, "wpsBank");

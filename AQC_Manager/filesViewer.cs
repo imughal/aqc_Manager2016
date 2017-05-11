@@ -16,9 +16,23 @@ namespace AQC_Manager
         public filesViewer()
         {
             InitializeComponent();
+            loading();
         }
 
+        public filesViewer(string employee)
+        {
+            InitializeComponent();
+            loading();
+            //Combox1.SelectedIndex = Combox1.FindStringExact("test1")
+            comboBox1.SelectedIndex = comboBox1.FindStringExact(employee);
+        }
+
+
         private void filesViewer_Load(object sender, EventArgs e)
+        {
+
+        }
+        private void loading()
         {
             //var connectionString = "connection string goes here";
             using (MySqlConnection con = database.getConnection())
@@ -34,21 +48,26 @@ namespace AQC_Manager
                         {
                             String Name = reader.GetString("name");
                             string employee_id = reader.GetString("employee_id");
-                            comboBox1.Items.Add(Name + "("+employee_id+")");
+                            comboBox1.Items.Add(Name + "(" + employee_id + ")");
+                            comboBox1.SelectedIndex = 0;
                         }
                     }
                 }
             }
         }
-
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            loadFiles();
+            
+        }
+        private void loadFiles()
         {
             listFiles.Items.Clear();
             using (MySqlConnection con = database.getConnection())
             {
                 String employeeID = comboBox1.Text.Split('(', ')')[1];
                 con.Open();
-                String query = "SELECT fileName FROM documents WHERE employee_id = '"+employeeID+"';";
+                String query = "SELECT fileName FROM documents WHERE employee_id = '" + employeeID + "';";
                 using (MySqlCommand command = new MySqlCommand(query, con))
                 {
                     using (MySqlDataReader reader = command.ExecuteReader())
@@ -57,13 +76,12 @@ namespace AQC_Manager
                         while (reader.Read())
                         {
                             String Name = reader.GetString("fileName");
-                            
+
                             listFiles.Items.Add(Name);
                         }
                     }
                 }
             }
-            
         }
 
         private void listFiles_SelectedIndexChanged(object sender, EventArgs e)
@@ -154,12 +172,57 @@ namespace AQC_Manager
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
+            //File Delete Function
+            if (comboBox1.SelectedItem != null)
+            {
+                if (DialogResult.Yes == MessageBox.Show("Do You Want Delete ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
+                {
+                    DelFile();
+                }
+            }
+        }
+        private void DelFile()
+        {
+            string emp_id = comboBox1.Text.Split('(', ')')[1];
+            string selectedFile = "";
+            if (listFiles.SelectedIndices.Count <= 0)
+            {
+                return;
+            }
+            int intselectedindex = listFiles.SelectedIndices[0];
+            if (intselectedindex >= 0)
+            {
+                selectedFile = listFiles.Items[intselectedindex].Text;
+
+            }
+            String sqlQ = "DELETE from documents WHERE employee_id = '" + emp_id + "' AND fileName = '" + selectedFile + "'";
+            MySqlConnection conn = database.getConnection();
+            MySqlCommand cmd = new MySqlCommand(sqlQ, conn);
+
+            try
+            {
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Deleted Successfully...");
+                fileViewBox.Image = null;
+                fileViewBox.InitialImage = null;
+                loadFiles();
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
 
         }
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
+            addFiles aF = new addFiles(comboBox1.Text);
+            aF.Show();
 
+            aF.MdiParent = this.MdiParent;
         }
 
         private void toolStripButton4_Click(object sender, EventArgs e)

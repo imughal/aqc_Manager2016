@@ -423,8 +423,8 @@ namespace AQC_Manager
                             //Labor Card information
                             personCode.Text = reader.GetString("personCode");
                             laborCardNumber.Text = reader.GetString("laborCardNumber");
-                            laborExpiryDate.Value = reader.GetDateTime("laborIssue");
-                            laborIssueDate.Value = reader.GetDateTime("laborExpiry");
+                            laborExpiryDate.Value = reader.GetDateTime("laborExpiry");
+                            laborIssueDate.Value = reader.GetDateTime("laborIssue");
 
                         //,  `wpsBank`, `wpsBranch`, `wpsAccount`, `wpsIBAN`, `wpsCard`, `wpsIssueDate`,`wpsExpiryDate`
                             //WPS Information
