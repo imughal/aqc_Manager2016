@@ -32,8 +32,17 @@ namespace AQC_Manager
         {
 
         }
+        //Panning
+        //double picRatio;
+        //int picWidth, picHeight, zoomInt = 0;
+        //bool _isPanning = false;
+        //Point startPt;
+        /////////////
+
+
         private void loading()
         {
+            //this.fileViewBox.MouseWheel += OnMouseWheel;
             //var connectionString = "connection string goes here";
             using (MySqlConnection con = database.getConnection())
             {
@@ -133,7 +142,9 @@ namespace AQC_Manager
                         fileViewBox.Image = bi;
 
                         //fileViewBox.SizeMode = PictureBoxSizeMode.StretchImage;
-
+                        //picWidth = fileViewBox.Width;
+                        //picHeight = fileViewBox.Height;
+                        //picRatio = ((double)picHeight / (double)picWidth);
                     }
                 }
                 conn.Close();
@@ -222,7 +233,7 @@ namespace AQC_Manager
             addFiles aF = new addFiles(comboBox1.Text);
             aF.Show();
 
-            aF.MdiParent = this.MdiParent;
+            //aF.MdiParent = this.MdiParent;
         }
 
         private void toolStripButton4_Click(object sender, EventArgs e)
@@ -234,5 +245,83 @@ namespace AQC_Manager
         {
 
         }
+
+        //Image PAN
+        //public void zoomPicturebox()
+        //{
+        //    fileViewBox.Width = picWidth;
+        //    fileViewBox.Height = picHeight;
+
+        //    switch (zoomInt)
+        //    {
+        //        case -2:
+        //            fileViewBox.Width = Convert.ToInt32(((double)fileViewBox.Width) * 0.25);
+        //            fileViewBox.Height = Convert.ToInt32(((double)fileViewBox.Width) * picRatio);
+        //            //fileViewBox.Text = ("Zoom = 25%");
+        //            break;
+        //        case -1:
+        //            fileViewBox.Width = Convert.ToInt32(((double)fileViewBox.Width) * 0.5);
+        //            fileViewBox.Height = Convert.ToInt32(((double)fileViewBox.Width) * picRatio);
+        //            //lblZoom.Text = ("Zoom = 50%");
+        //            break;
+        //        case 0:
+        //            fileViewBox.Width = picWidth;
+        //            fileViewBox.Height = picHeight;
+        //            //lblZoom.Text = ("Zoom = 100%");
+        //            break;
+        //        case 1:
+        //            fileViewBox.Width = Convert.ToInt32(((double)fileViewBox.Width) * 1.1);
+        //            fileViewBox.Height = Convert.ToInt32(((double)fileViewBox.Width) * picRatio);
+        //            //lblZoom.Text = ("Zoom = 110%");
+        //            break;
+        //        case 2:
+        //            fileViewBox.Width = Convert.ToInt32(((double)fileViewBox.Width) * 1.5);
+        //            fileViewBox.Height = Convert.ToInt32(((double)fileViewBox.Width) * picRatio);
+        //            //lblZoom.Text = ("Zoom = 150%");
+        //            break;
+        //        case 3:
+        //            fileViewBox.Width = Convert.ToInt32(((double)fileViewBox.Width) * 1.75);
+        //            fileViewBox.Height = Convert.ToInt32(((double)fileViewBox.Width) * picRatio);
+        //            //lblZoom.Text = ("Zoom = 175%");
+        //            break;
+        //        case 4:
+        //            fileViewBox.Width = Convert.ToInt32(((double)fileViewBox.Width) * 2);
+        //            fileViewBox.Height = Convert.ToInt32(((double)fileViewBox.Width) * picRatio);
+        //            //lblZoom.Text = ("Zoom = 200%");
+        //            break;
+        //    }
+
+
+        //    fileViewBox.Update();
+        //}
+        //private void OnMouseWheel(MouseEventArgs e)
+        //    private void OnMouseWheel(object sender, MouseEventArgs e)
+        //{
+        //    if (e.Delta > 0)
+        //    {
+        //        zoomInt++;
+        //        if (zoomInt > 4)
+        //        {
+        //            zoomInt = 4;
+        //        }
+        //        zoomPicturebox();
+        //    }
+        //    else if (e.Delta < 0)
+        //    {
+        //        zoomInt--;
+        //        if (zoomInt == -3)
+        //        {
+        //            zoomInt = -2;
+        //        }
+        //        zoomPicturebox();
+        //    }
+
+        //}
+
+            private void fileViewBox_MouseHover(object sender, EventArgs e)
+            {
+                fileViewBox.Focus();
+            }
+
     }
 }

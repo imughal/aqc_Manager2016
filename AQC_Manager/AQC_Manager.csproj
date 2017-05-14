@@ -104,6 +104,18 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>allSettings.settings</DependentUpon>
     </Compile>
+    <Compile Include="laborExpiries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="laborExpiries.Designer.cs">
+      <DependentUpon>laborExpiries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="phoneDirectory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="phoneDirectory.Designer.cs">
+      <DependentUpon>phoneDirectory.cs</DependentUpon>
+    </Compile>
     <Compile Include="modifyEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,12 +147,6 @@
     <Compile Include="newEmployee.Designer.cs">
       <DependentUpon>newEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="PhoneDirectory.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PhoneDirectory.Designer.cs">
-      <DependentUpon>PhoneDirectory.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="viewEmployee.cs">
@@ -151,6 +157,12 @@
     </Compile>
     <EmbeddedResource Include="addFiles.resx">
       <DependentUpon>addFiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="laborExpiries.resx">
+      <DependentUpon>laborExpiries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="phoneDirectory.resx">
+      <DependentUpon>phoneDirectory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="modifyEmployee.resx">
       <DependentUpon>modifyEmployee.cs</DependentUpon>
@@ -166,9 +178,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="newEmployee.resx">
       <DependentUpon>newEmployee.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PhoneDirectory.resx">
-      <DependentUpon>PhoneDirectory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

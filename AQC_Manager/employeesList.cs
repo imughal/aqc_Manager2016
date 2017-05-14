@@ -47,7 +47,7 @@ namespace AQC_Manager
                         break;
                 }
             }
-            String sql = "SELECT employee_id AS 'Employee ID', name AS 'Name',fathername AS 'Father Name', sex AS 'Gender', dateOfBirth as 'Date of Birth', nationality as 'Nationality', religion as 'Religion' FROM aqc_manager.employees";
+            String sql = "SELECT employee_id AS 'Employee ID', name AS 'Name',fathername AS 'Father Name', sex AS 'Gender',passportNumber as 'Passport Number' ,dateOfBirth as 'Date of Birth', nationality as 'Nationality', religion as 'Religion' FROM aqc_manager.employees";
             DataSet DS = new DataSet();
             MySqlDataAdapter myDA = new MySqlDataAdapter(sql, con);
             myDA.Fill(DS);
@@ -76,7 +76,10 @@ namespace AQC_Manager
         }
         private void Form2_Load(object sender, EventArgs e)
         {
-
+            if (employeesShow.Rows.Count != 0)
+            {
+                employeesShow.Rows[0].Selected = true;
+            }
 
         }
 

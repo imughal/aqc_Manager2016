@@ -25,23 +25,45 @@ namespace AQC_Manager
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            employeesList nx = new employeesList();
-            nx.Show();
-            nx.MdiParent = this;
+            if (Application.OpenForms.OfType<employeesList>().Count() == 1)
+            {
+                Application.OpenForms.OfType<employeesList>().First().Focus();
+            }
+            else
+            {
+                employeesList nx = new employeesList();
+                nx.Show();
+                nx.MdiParent = this;
+            }
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            viewEmployee nx = new viewEmployee();
-            nx.Show();
-            nx.MdiParent = this;
+            if (Application.OpenForms.OfType<viewEmployee>().Count() == 1)
+            {
+                Application.OpenForms.OfType<viewEmployee>().First().Focus();
+            }
+            else
+            {
+                viewEmployee nx = new viewEmployee();
+                nx.Show();
+                nx.MdiParent = this;
+
+            }
         }
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
-            newEmployee nx = new newEmployee();
-            nx.Show();
-            nx.MdiParent = this;
+            if (Application.OpenForms.OfType<newEmployee>().Count() == 1)
+            {
+                Application.OpenForms.OfType<newEmployee>().First().Focus();
+            }
+            else
+            {
+                newEmployee nx = new newEmployee();
+                nx.Show();
+                nx.MdiParent = this;
+            }
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -51,16 +73,30 @@ namespace AQC_Manager
 
         private void toolStripButton5_Click(object sender, EventArgs e)
         {
-            filesViewer nx = new filesViewer();
-            nx.Show();
-            nx.MdiParent = this;
+            if (Application.OpenForms.OfType<filesViewer>().Count() == 1)
+            {
+                Application.OpenForms.OfType<filesViewer>().First().Focus();
+            }
+            else
+            {
+                filesViewer nx = new filesViewer();
+                nx.Show();
+                nx.MdiParent = this;
+            }
         }
 
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
-            addFiles aF = new addFiles();
-            aF.Show();
-            aF.MdiParent = this;
+            if (Application.OpenForms.OfType<addFiles>().Count() == 1)
+            {
+                Application.OpenForms.OfType<addFiles>().First().Focus();
+            }
+            else
+            {
+                addFiles aF = new addFiles();
+                aF.Show();
+                aF.MdiParent = this;
+            }
         }
 
         private void toolStripLabel1_Click(object sender, EventArgs e)
@@ -81,9 +117,37 @@ namespace AQC_Manager
             }
         }
 
+        private void toolStripButton6_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms.OfType<phoneDirectory>().Count() == 1)
+            {
+                Application.OpenForms.OfType<phoneDirectory>().First().Focus();
+            }
+            else
+            {
+                phoneDirectory pD = new phoneDirectory();
+                pD.Show();
+                pD.MdiParent = this;
+            }
+        }
 
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
 
+        }
 
-
+        private void toolStripButton7_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms.OfType<laborExpiries>().Count() == 1)
+            {
+                Application.OpenForms.OfType<laborExpiries>().First().Focus();
+            }
+            else
+            {
+                laborExpiries lE = new laborExpiries();
+                lE.Show();
+                lE.MdiParent = this;
+            }
+        }
     }
 }
